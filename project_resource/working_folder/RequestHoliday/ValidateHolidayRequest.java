@@ -20,6 +20,7 @@ public class ValidateHolidayRequest
   public static boolean validateRequest
     (GregorianCalendar dateFrom, GregorianCalendar dateTo, int driverID)
   {
+    System.out.println("validating request");
     //validate holiday lenght
     if(dateTo.YEAR > dateFrom.YEAR) //Over the year
     {

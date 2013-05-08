@@ -144,19 +144,19 @@ public class viewTimetable extends javax.swing.JFrame {
                         "22:00 - 23:00", "23:00 - 00:00", "00:00 - 1:00"};
                     
                     if (selDay.compareTo("Monday") == 0)
-                        dayID = 1;
-                    else if(selDay.compareTo("Tuesday") == 0)
                         dayID = 2;
-                    else if(selDay.compareTo("Wednesday") == 0)
+                    else if(selDay.compareTo("Tuesday") == 0)
                         dayID = 3;
-                    else if(selDay.compareTo("Thursday") == 0)
+                    else if(selDay.compareTo("Wednesday") == 0)
                         dayID = 4;
-                    else if(selDay.compareTo("Friday") == 0)
+                    else if(selDay.compareTo("Thursday") == 0)
                         dayID = 5;
-                    else if(selDay.compareTo("Saturday") == 0)
+                    else if(selDay.compareTo("Friday") == 0)
                         dayID = 6;
-                    else if (selDay.compareTo("Sunday") == 0)
+                    else if(selDay.compareTo("Saturday") == 0)
                         dayID = 7;
+                    else if (selDay.compareTo("Sunday") == 0)
+                        dayID = 1;
 
                     System.out.println("Date you have selected is "+selDay);
                     String[][] toBePrinted = RoasterGenerator.dayGUI(dayID, RoasterGenerator.roster);

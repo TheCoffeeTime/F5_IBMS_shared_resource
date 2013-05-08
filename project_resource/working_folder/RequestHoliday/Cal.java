@@ -146,7 +146,7 @@ public class Cal extends JPanel {
   /**
    * Construct a Cal, starting with today.
    */
-  Cal(int driverID) {
+  public Cal(int driverID) {
     super();
     setYYMMDD(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
         calendar.get(Calendar.DAY_OF_MONTH));
@@ -264,7 +264,7 @@ public class Cal extends JPanel {
   };
 
   /** Compute which days to put where, in the Cal panel */
-  protected void recompute(int driverID) {
+  public void recompute(int driverID) {
     // System.out.println("Cal::recompute: " + yy + ":" + mm + ":" + dd);
     if (mm < 0 || mm > 11)
       throw new IllegalArgumentException("Month " + mm

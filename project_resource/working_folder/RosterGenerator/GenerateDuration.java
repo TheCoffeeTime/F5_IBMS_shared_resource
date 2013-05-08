@@ -128,7 +128,6 @@ public class GenerateDuration {
         // want to initalize all this to 0 so can access the index
         for(int i = 0; i < 25; i++)
             busIndex.add(0);
-        
 
         ArrayList<Duration> durationArray = new ArrayList<Duration>();
         

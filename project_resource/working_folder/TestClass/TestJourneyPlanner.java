@@ -13,7 +13,7 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author Q'ketske
+ * @author Nikita
  */
 public class TestJourneyPlanner {
    public static void main(String args[]) {
@@ -40,11 +40,9 @@ public class TestJourneyPlanner {
     
     boolean arriveBy = true;
     
-    Timetable timetable = new Timetable(date);
-    
     ArrayList<ArrayList<Journey>> myJourneys = JourneyPlanner.JourneyPlanner(departureAreaName, departureBusStopName,
                                                               arrivalAreaName, arrivalBusStopName, 
-                                                              date, arriveBy, timetable);
+                                                              date, arriveBy);
     JourneyPlanner.printJourneyPlanner(myJourneys);
   } 
 }

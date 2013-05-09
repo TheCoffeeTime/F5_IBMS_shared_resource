@@ -16,7 +16,7 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author Q'ketske
+ * @author Nikita
  */
 public class Timetable {
   

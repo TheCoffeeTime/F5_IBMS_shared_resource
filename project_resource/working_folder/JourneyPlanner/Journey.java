@@ -13,7 +13,7 @@ import database.BusStopInfo;
 
 /**
  *
- * @author Q'ketske
+ * @author Nikita
  */
 public class Journey {
   

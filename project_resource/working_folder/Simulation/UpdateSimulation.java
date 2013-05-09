@@ -33,7 +33,6 @@ public class UpdateSimulation {
         // now set the current time to the next minute
         int currentTime = simulation.get(0).getCurrentTime() + 1;
         
-        int currentService = 0;
         
         // array to hold any services we may have to get later on
         // for cancel or delays we may need the next service
@@ -278,6 +277,7 @@ public class UpdateSimulation {
         
         // get the service times for the start of the day
         int[] serviceTimes = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), 0);
+        
         switch(route)
         {
           //for bus route 383, the database has 11 stops 3 of which are not use

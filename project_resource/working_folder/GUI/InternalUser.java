@@ -288,9 +288,14 @@ public class InternalUser extends javax.swing.JFrame {
         {
             if(sim383.get(i).getChanged())
             {
-                BusStop[0][i].setText(sim383.get(i).getBusStopID());
-                NextArrival[0][i].setText(sim383.get(i).getNextArriveTime());
-                Status[0][i].setText(sim383.get(i).getStatus());
+                BusStop[0][i].setText(sim383.get(i).getBusStopName());
+                NextArrival[0][i].setText(sim383.get(i).getTime());
+                if(sim383.get(i).getStatus() == 0)
+                  Status[0][i].setText("On time");
+                else if(sim383.get(i).getStatus() == 1)
+                  Status[0][i].setText("Cancelled");
+                else
+                  Status[0][i].setText("Delayed");
                 if(sim383.get(i).getStatus() == 1)
                 {
                   Note[0][i].setText(sim383.get(i).getRandomCancelMessage());
@@ -306,16 +311,21 @@ public class InternalUser extends javax.swing.JFrame {
         {
             if(sim384.get(i).getChanged())
             {
-                BusStop[0][i].setText(sim384.get(i).getBusStopID());
-                NextArrival[0][i].setText(sim384.get(i).getNextArriveTime());
-                Status[0][i].setText(sim384.get(i).getStatus());
+                BusStop[1][i].setText(sim384.get(i).getBusStopName());
+                NextArrival[0][i].setText(sim384.get(i).getTime());
+                if(sim384.get(i).getStatus() == 0)
+                  Status[1][i].setText("On time");
+                else if(sim384.get(i).getStatus() == 1)
+                  Status[1][i].setText("Cancelled");
+                else
+                  Status[1][i].setText("Delayed");
                 if(sim384.get(i).getStatus() == 1)
                 {
-                  Note[0][i].setText(sim384.get(i).getRandomCancelMessage());
+                  Note[1][i].setText(sim384.get(i).getRandomCancelMessage());
                 }//if
                 else
                 {
-                    Note[0][i].setText(sim384.get(i).getRandomDelayMessage());
+                    Note[1][i].setText(sim384.get(i).getRandomDelayMessage());
                 }//else
             }//if
         }//for
@@ -324,16 +334,22 @@ public class InternalUser extends javax.swing.JFrame {
         {
             if(sim358O.get(i).getChanged())
             {
-                BusStop[0][i].setText(sim358O.get(i).getBusStopID());
-                NextArrival[0][i].setText(sim358O.get(i).getNextArriveTime());
-                Status[0][i].setText(sim358O.get(i).getStatus());
+                BusStop[2][i].setText(sim358O.get(i).getBusStopName());
+                NextArrival[0][i].setText(sim358O.get(i).getTime());
+                
+                if(sim358O.get(i).getStatus() == 0)
+                  Status[2][i].setText("On time");
+                else if(sim358O.get(i).getStatus() == 1)
+                  Status[2][i].setText("Cancelled");
+                else
+                  Status[2][i].setText("Delayed");
                 if(sim358O.get(i).getStatus() == 1)
                 {
-                  Note[0][i].setText(sim358O.get(i).getRandomCancelMessage());
+                  Note[2][i].setText(sim358O.get(i).getRandomCancelMessage());
                 }//if
                 else
                 {
-                    Note[0][i].setText(sim358O.get(i).getRandomDelayMessage());
+                    Note[2][i].setText(sim358O.get(i).getRandomDelayMessage());
                 }//else
             }//if
         }//for
@@ -342,16 +358,21 @@ public class InternalUser extends javax.swing.JFrame {
         {
             if(sim358B.get(i).getChanged())
             {
-                BusStop[0][i].setText(sim358B.get(i).getBusStopID());
-                NextArrival[0][i].setText(sim358B.get(i).getNextArriveTime());
-                Status[0][i].setText(sim358B.get(i).getStatus());
+                BusStop[3][i].setText(sim358B.get(i).getBusStopName());
+                NextArrival[0][i].setText(sim358B.get(i).getTime());
+                if(sim358B.get(i).getStatus() == 0)
+                  Status[3][i].setText("On time");
+                else if(sim358B.get(i).getStatus() == 1)
+                  Status[3][i].setText("Cancelled");
+                else
+                  Status[3][i].setText("Delayed");
                 if(sim358B.get(i).getStatus() == 1)
                 {
-                  Note[0][i].setText(sim358B.get(i).getRandomCancelMessage());
+                  Note[3][i].setText(sim358B.get(i).getRandomCancelMessage());
                 }//if
                 else
                 {
-                    Note[0][i].setText(sim358B.get(i).getRandomDelayMessage());
+                    Note[3][i].setText(sim358B.get(i).getRandomDelayMessage());
                 }//else
             }//if
         }//for
@@ -3629,13 +3650,13 @@ public class InternalUser extends javax.swing.JFrame {
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel33Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(53, 53, 53)
                         .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel33Layout.createSequentialGroup()
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

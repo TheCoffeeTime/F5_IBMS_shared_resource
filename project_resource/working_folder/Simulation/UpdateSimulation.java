@@ -488,7 +488,7 @@ public class UpdateSimulation {
         System.out.println(simArray.get(simArray.size() - 1).getServiceNumber());
         while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)))
         {
-          updateSim(simArray, 66);
+          updateSim(simArray, 68);
           System.out.println("current time " + simArray.get(0).getCurrentTime());
           k++;
         }

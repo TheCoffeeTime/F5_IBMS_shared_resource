@@ -164,14 +164,37 @@ public class JourneyPlanner {
     }
     return null;
   }
-  /*
-  public static Journey findNextOption(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
-  {
-    Journey nextJourney;
+  
+  public static Journey findNextOption(Journey currentJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
+  {  
+    int route = currentJourney.getRoute();
+    String departureBusStopString = currentJourney.getDepartureBusStopString();
+    String arrivalBusStopString = currentJourney.getArrivalBusStopString();
+    int departureBusStopIndex = currentJourney.getDepartureBusStopIndex();
+    int arrivalBusStopIndex = currentJourney.getArrivalBusStopIndex();
+    int serviceID = 0;
     
+    if (arriveBy == true)
+    {
+      serviceID = currentJourney.getServiceID() - 1;
+    }
+    else
+    {
+      serviceID = currentJourney.getServiceID() + 1;
+    }
+    
+    if (serviceID < 0 || serviceID > RouteServicesTimes.size()-1)
+    {
+      return null;
+    }
+    int departureTime = RouteServicesTimes.get(serviceID).get(departureBusStopIndex);
+    int arrivalTime = RouteServicesTimes.get(serviceID).get(arrivalBusStopIndex);
+    Journey nextJourney = new Journey(route, departureBusStopString, departureTime,
+                                           arrivalBusStopString,   arrivalTime,
+                                           serviceID, departureBusStopIndex, arrivalBusStopIndex);;
     return nextJourney;
   }
-  */
+  
   
   public static ArrayList<Journey> findOtherOptions(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
   {
@@ -362,27 +385,33 @@ public class JourneyPlanner {
       if (arriveBy == false) // DepartForm
       {
         Journey journey = findJourney2(departureRoutes, time, arriveBy, timetable,
-                               allDepartureAreaBusStopsList, allBusStationBusStopsList);
+                               allDepartureAreaBusStopsList, allBusStationBusStopsList);    
         if (journey != null)
         {
-          int newTime = journey.getArrivalTime();
-          Journey journey1 = findJourney2(arrivalRoutes, newTime, false, timetable,
-                             allBusStationBusStopsList, allArrivalAreaBusStopsList);
-          if (journey1 == null)
-          {
-            return null;
-          }
-          
           ArrayList<ArrayList<Integer>> RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
           ArrayList<Journey> journeys = findOtherOptions(journey, arriveBy, RouteServicesTimes);
-          possibleJourneys.add(journeys);
           
-          RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
-         
-          ArrayList<Journey> journeys1 = findOtherOptions(journey1, arriveBy, RouteServicesTimes);
-          possibleJourneys.add(journeys1);
+          for (int i = 0; i < journeys.size(); i++)
+          {
+            int newTime = journeys.get(i).getArrivalTime();
+            Journey journey1 = findJourney2(arrivalRoutes, newTime, false, timetable,
+                             allBusStationBusStopsList, allArrivalAreaBusStopsList);
+            if (journey1 != null)
+            {
+              possibleJourneys.add(new ArrayList());
+              possibleJourneys.get(i).add(journeys.get(i));
+              possibleJourneys.get(i).add(journey1);
+            }
+          }
           
-          return possibleJourneys;        
+          if (possibleJourneys.size() > 1 && possibleJourneys.get(0).size() > 1)
+          {
+            return possibleJourneys;
+          }
+          else
+          {
+            return null;
+          }    
         }
         return null;
       }
@@ -392,19 +421,29 @@ public class JourneyPlanner {
                            allBusStationBusStopsList, allArrivalAreaBusStopsList);
         if (journey != null)
         {
-          int newTime = journey.getDepartureTime();
-          Journey journey1 = findJourney2(departureRoutes, newTime, true, timetable,
-                             allDepartureAreaBusStopsList, allBusStationBusStopsList);
-          
           ArrayList<ArrayList<Integer>> RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
-          ArrayList<Journey> journeys1 = findOtherOptions(journey1, arriveBy, RouteServicesTimes);
-          possibleJourneys.add(journeys1);
-          
-          RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
           ArrayList<Journey> journeys = findOtherOptions(journey, arriveBy, RouteServicesTimes);
-          possibleJourneys.add(journeys);
           
-          return possibleJourneys;
+          for (int i = 0; i < journeys.size(); i++)
+          {
+            int newTime = journeys.get(i).getDepartureTime();
+            Journey journey1 = findJourney2(departureRoutes, newTime, true, timetable,
+                               allDepartureAreaBusStopsList, allBusStationBusStopsList);
+            if (journey1 != null)
+            {
+              possibleJourneys.add(new ArrayList());
+              possibleJourneys.get(i).add(journey1);
+              possibleJourneys.get(i).add(journeys.get(i));          
+            }
+          }
+          if (possibleJourneys.size() > 1 && possibleJourneys.get(0).size() > 1)
+          {
+            return possibleJourneys;
+          }
+          else
+          {
+            return null;
+          }
         }
         return null;
       }      

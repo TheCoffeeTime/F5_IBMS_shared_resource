@@ -21,6 +21,7 @@ import java.util.Arrays;
 public class UpdateSimulation {
   
     public static boolean remove = false;
+    public static boolean made = false;
     
     public static void updateSim(ArrayList<Simulation> simulation, int route)
     {
@@ -39,7 +40,7 @@ public class UpdateSimulation {
         
         // array to hold any services we may have to get later on
         // for cancel or delays we may need the next service
-        int[] tempServiceTimes;
+        int[] tempServiceTimes = null;
         
         int j = 0;
         
@@ -64,7 +65,9 @@ public class UpdateSimulation {
                 if(simulation.get(i).getServiceNumber() < maxServices - 1)
                 {
                   simulation.get(i).setServiceNumber(simulation.get(i).getServiceNumber() + 1);
+                  made = false;
                 }
+                
                 if(simulation.get(i).getServiceNumber() == 2 || simulation.get(i).getServiceNumber() == 4 ||
                    simulation.get(i).getServiceNumber() == 11 || simulation.get(i).getServiceNumber() == 13)
                 {
@@ -87,8 +90,13 @@ public class UpdateSimulation {
                 } // else if
                 
               // now we need to get the service times for this stop
-              tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
-              
+              if(made == true)
+              {
+                tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
+                made = false;
+              }
+              else
+                return;
               
               // some bugs in the database, so might need to sort Array
               /*if(i != 0)
@@ -99,7 +107,7 @@ public class UpdateSimulation {
                 }
               }*/
               // set the next arrival time accordingly only if the service exists
-              if(simulation.get(i).getServiceNumber() < maxServices)
+              if(simulation.get(i).getServiceNumber() < maxServices - 1)
               {
                 simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
               }
@@ -183,22 +191,32 @@ public class UpdateSimulation {
             simulation.get(i).setCurrentTime(currentTime);
             simulation.get(i).getDate().add(Calendar.MINUTE, 1);
             System.out.println("route " + route + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
-            if(i == 5 && simulation.get(i).getServiceNumber() > 2 && route == 68)
+            if(i == 5 && simulation.get(i).getServiceNumber() > 2 && (route == 68 || route == 67))
             {
               j --;
               continue;
             }  
             if(simulation.get(i).getNextArriveTime() <= currentTime)
             {
+              
               // the bus has come to the stop, so the next bus at the stop will be the next service
               // only if its not the last service
               if(simulation.get(i).getServiceNumber() < maxServices - 1)
               {
+                made = true;
                 simulation.get(i).setServiceNumber(simulation.get(i).getServiceNumber() + 1);
               }
               // now we need to get the service times for this stop
-              tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
+              if(made == true)
+              {
+                tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
+                made = false;
+              }
+              else
+                return;
               // set the next arrival time accordingly
+              
+              System.out.println(simulation.size());
               
               // some bugs in the database, so might need to sort Array
               /*if(i != 0)
@@ -210,7 +228,7 @@ public class UpdateSimulation {
               }*/
               
                // set the next arrival time accordingly only if the service exists
-              if(simulation.get(i).getServiceNumber() < maxServices)
+              if(simulation.get(i).getServiceNumber() < maxServices - 1)
               {
                 simulation.get(i).setNextArriveTime(tempServiceTimes[j]);
               }
@@ -324,6 +342,7 @@ public class UpdateSimulation {
                date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
+               j++;
               }
             }
             break;
@@ -511,7 +530,7 @@ public class UpdateSimulation {
     {
         database.openBusDatabase();
         
-        int route = 65;
+        int route = 66;
         
         GregorianCalendar date = new GregorianCalendar(2013, 5, 24, 0, 0, 0);
         
@@ -535,7 +554,7 @@ public class UpdateSimulation {
         int[] lastServices = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), noOfServices - 1);
         while(simArray.get(0).getCurrentTime() < lastServices[lastServices.length - 1])
         {
-          updateSim(simArray, 65);
+          updateSim(simArray, 66);
         }
     }
     

@@ -53,8 +53,7 @@ public class UpdateSimulation {
         }
         
         if(route == 66)
-        {
-            
+        { 
             for(int i = 0; i < simulation.size(); i++)
             {
               simulation.get(i).setCurrentTime(currentTime);
@@ -66,7 +65,7 @@ public class UpdateSimulation {
                 if(simulation.get(i).getServiceNumber() < maxServices - 1)
                 {
                   simulation.get(i).setServiceNumber(simulation.get(i).getServiceNumber() + 1);
-                  made = false;
+                  made = true;
                 }
                 
                 if(simulation.get(i).getServiceNumber() == 2 || simulation.get(i).getServiceNumber() == 4 ||

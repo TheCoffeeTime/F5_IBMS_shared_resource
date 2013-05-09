@@ -10,6 +10,7 @@ import RequestHoliday.Update;
 import RequestHoliday.ValidateHolidayRequest;
 import RosterGenerator.RoasterGenerator;
 import RosterGenerator.cellRenderer;
+import Simulation.Simulation;
 import database.DriverInfo;
 import database.database;
 import java.awt.Component;
@@ -19,7 +20,9 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
+import java.util.ArrayList;
 import javax.swing.*;
+import Simulation.*;
 
 
 
@@ -34,10 +37,10 @@ public class InternalUser extends javax.swing.JFrame {
     private int tabSize = 5;
     private int noOfBusStop = 10;
     private int noOfRoute = 4;
-    private Component[][] BusStop;    //383
-    private Component[][] NextArrival;    //384
-    private Component[][] Status;   //358 out
-    private Component[][] Note;   //358 back
+    private JLabel[][] BusStop;    //383
+    private JLabel[][] NextArrival;    //384
+    private JLabel[][] Status;   //358 out
+    private JLabel[][] Note;   //358 back
      
     private Component[] tabs; 
     /**
@@ -73,10 +76,10 @@ public class InternalUser extends javax.swing.JFrame {
         InternalUserTab.add(tabs[0]);
         
         //Initialise array of simulation
-        BusStop = new Component[noOfRoute][noOfBusStop];
-        NextArrival = new Component[noOfRoute][noOfBusStop];
-        Status = new Component[noOfRoute][noOfBusStop];
-        Note = new Component[noOfRoute][noOfBusStop];
+        BusStop = new JLabel[noOfRoute][noOfBusStop];
+        NextArrival = new JLabel[noOfRoute][noOfBusStop];
+        Status = new JLabel[noOfRoute][noOfBusStop];
+        Note = new JLabel[noOfRoute][noOfBusStop];
         initialiseRouteArray();
         
         ActionListener taskPerformer = new ActionListener() {
@@ -91,25 +94,183 @@ public class InternalUser extends javax.swing.JFrame {
      */
     private void initialiseRouteArray() {
         //For every lable in the simulator (that needed to be update)
-        BusStop[0] = BStop383.getComponents();
-        BusStop[1] = BStop384.getComponents();
-        BusStop[2] = BStop358O.getComponents();
-        BusStop[3] = BStop358B.getComponents();
+        BusStop[0][0] = B1_383;
+        BusStop[0][1] = B2_383;
+        BusStop[0][2] = B3_383;
+        BusStop[0][3] = B4_383;
+        BusStop[0][4] = B5_383;
+        BusStop[0][5] = B6_383;
+        BusStop[0][6] = B7_383;
+        BusStop[0][7] = B8_383;    
+        BusStop[0][8] = B9_383;
+        BusStop[0][9] = B10_383;    
         
-        NextArrival[0] = NA383.getComponents();
-        NextArrival[1] = NA384.getComponents();
-        NextArrival[2] = NA358O.getComponents();
-        NextArrival[3] = NA358B.getComponents();
+        BusStop[1][0] = B1_384;
+        BusStop[1][1] = B2_384;
+        BusStop[1][2] = B3_384;
+        BusStop[1][3] = B4_384;
+        BusStop[1][4] = B5_384;
+        BusStop[1][5] = B6_384;
+        BusStop[1][6] = B7_384;
+        BusStop[1][7] = B8_384;    
+        BusStop[1][8] = B9_384;
+        BusStop[1][9] = B10_384; 
         
-        Status[0] = Status383.getComponents();
-        Status[1] = Status384.getComponents();
-        Status[2] = Status358O.getComponents();
-        Status[3] = Status358B.getComponents();
+        BusStop[2][0] = B1_358O;
+        BusStop[2][1] = B2_358O;
+        BusStop[2][2] = B3_358O;
+        BusStop[2][3] = B4_358O;
+        BusStop[2][4] = B5_358O;
+        BusStop[2][5] = B6_358O;
+        BusStop[2][6] = B7_358O;
+        BusStop[2][7] = B8_358O;  
+        BusStop[2][8] = B9_358O;
+        BusStop[2][9] = B10_358O;
         
-        Note[0] = Note383.getComponents();
-        Note[1] = Note384.getComponents();
-        Note[2] = Note358O.getComponents();
-        Note[3] = Note358B.getComponents();
+        BusStop[3][0] = B1_358B;
+        BusStop[3][1] = B2_358B;
+        BusStop[3][2] = B3_358B;
+        BusStop[3][3] = B4_358B;
+        BusStop[3][4] = B5_358B;
+        BusStop[3][5] = B6_358B;
+        BusStop[3][6] = B7_358B;
+        BusStop[3][7] = B8_358B;    
+        BusStop[3][8] = B9_358B;
+        BusStop[3][9] = B10_358B; 
+        //-------------------------------------------------------------------
+        NextArrival[0][0] = N1_383;
+        NextArrival[0][1] = N2_383;
+        NextArrival[0][2] = N3_383;
+        NextArrival[0][3] = N4_383;
+        NextArrival[0][4] = N5_383;
+        NextArrival[0][5] = N6_383;
+        NextArrival[0][6] = N7_383;
+        NextArrival[0][7] = N8_383;
+        NextArrival[0][8] = N9_383;
+        NextArrival[0][9] = N10_383;
+        
+        NextArrival[1][0] = N1_384;
+        NextArrival[1][1] = N2_384;
+        NextArrival[1][2] = N3_384;
+        NextArrival[1][3] = N4_384;
+        NextArrival[1][4] = N5_384;
+        NextArrival[1][5] = N6_384;
+        NextArrival[1][6] = N7_384;
+        NextArrival[1][7] = N8_384;
+        NextArrival[1][8] = N9_384;
+        NextArrival[1][9] = N10_384;
+               
+        NextArrival[2][0] = N1_358O;
+        NextArrival[2][1] = N2_358O;
+        NextArrival[2][2] = N3_358O;
+        NextArrival[2][3] = N4_358O;
+        NextArrival[2][4] = N5_358O;
+        NextArrival[2][5] = N6_358O;
+        NextArrival[2][6] = N7_358O;
+        NextArrival[2][7] = N8_358O;
+        NextArrival[2][8] = N9_358O;
+        NextArrival[2][9] = N10_358O;
+        
+        NextArrival[3][0] = N1_358B;
+        NextArrival[3][1] = N2_358B;
+        NextArrival[3][2] = N3_358B;
+        NextArrival[3][3] = N4_358B;
+        NextArrival[3][4] = N5_358B;
+        NextArrival[3][5] = N6_358B;
+        NextArrival[3][6] = N7_358B;
+        NextArrival[3][7] = N8_358B;
+        NextArrival[3][8] = N9_358B;
+        NextArrival[3][9] = N10_358B;
+        
+        //-------------------------------------------------------------------
+        
+        Status[0][0] = S1_383;
+        Status[0][1] = S2_383;
+        Status[0][2] = S3_383;
+        Status[0][3] = S4_383;
+        Status[0][4] = S5_383;
+        Status[0][5] = S6_383;
+        Status[0][6] = S7_383;
+        Status[0][7] = S8_383;
+        Status[0][8] = S9_383;
+        Status[0][9] = S10_383;
+        
+        Status[1][0] = S1_384;
+        Status[1][1] = S2_384;
+        Status[1][2] = S3_384;
+        Status[1][3] = S4_384;
+        Status[1][4] = S5_384;
+        Status[1][5] = S6_384;
+        Status[1][6] = S7_384;
+        Status[1][7] = S8_384;
+        Status[1][8] = S9_384;
+        Status[1][9] = S10_384;
+        
+        Status[2][0] = S1_358O;
+        Status[2][1] = S2_358O;
+        Status[2][2] = S3_358O;
+        Status[2][3] = S4_358O;
+        Status[2][4] = S5_358O;
+        Status[2][5] = S6_358O;
+        Status[2][6] = S7_358O;
+        Status[2][7] = S8_358O;
+        Status[2][8] = S9_358O;
+        Status[2][9] = S10_358O;
+        
+        Status[3][0] = S1_358B;
+        Status[3][1] = S2_358B;
+        Status[3][2] = S3_358B;
+        Status[3][3] = S4_358B;
+        Status[3][4] = S5_358B;
+        Status[3][5] = S6_358B;
+        Status[3][6] = S7_358B;
+        Status[3][7] = S8_358B;
+        Status[3][8] = S9_358B;
+        Status[3][9] = S10_358B;
+        //-------------------------------------------------------------------
+        
+        Note[0][0] = NT1_383;
+        Note[0][1] = NT2_383;
+        Note[0][2] = NT3_383;
+        Note[0][3] = NT4_383;
+        Note[0][4] = NT5_383;
+        Note[0][5] = NT6_383;
+        Note[0][6] = NT7_383;
+        Note[0][7] = NT8_383;
+        Note[0][8] = NT9_383;
+        Note[0][9] = NT10_383;
+        
+        Note[1][0] = NT1_384;
+        Note[1][1] = NT2_384;
+        Note[1][2] = NT3_384;
+        Note[1][3] = NT4_384;
+        Note[1][4] = NT5_384;
+        Note[1][5] = NT6_384;
+        Note[1][6] = NT7_384;
+        Note[1][7] = NT8_384;
+        Note[1][8] = NT9_384;
+        Note[1][9] = NT10_384;
+        
+        Note[2][0] = NT1_358O;
+        Note[2][1] = NT2_358O;
+        Note[2][2] = NT3_358O;
+        Note[2][3] = NT4_358O;
+        Note[2][4] = NT5_358O;
+        Note[2][5] = NT6_358O;
+        Note[2][6] = NT7_358O;
+        Note[2][7] = NT8_358O;
+        Note[2][8] = NT9_358O;
+        Note[2][9] = NT10_358O;
+        
+        Note[3][0] = NT1_358B;
+        Note[3][1] = NT2_358B;
+        Note[3][2] = NT3_358B;
+        Note[3][3] = NT4_358B;
+        Note[3][4] = NT5_358B;
+        Note[3][6] = NT7_358B;
+        Note[3][7] = NT8_358B;
+        Note[3][8] = NT9_358B;
+        Note[3][9] = NT10_358B;
         
     }
     
@@ -118,7 +279,18 @@ public class InternalUser extends javax.swing.JFrame {
      */
     private void updateSimulation()
     {
+        UpdateSimulation.updateSim(sim383, 65);
+        UpdateSimulation.updateSim(sim384, 66);
+        UpdateSimulation.updateSim(sim358O, 67);
+        UpdateSimulation.updateSim(sim358B, 68);
         
+        for(int i = 0; i < sim383.size(); i++)
+        {
+            BusStop[0][i].setText(sim383.get(i)getBusStopID());
+            NextArrival[0][i].
+            Status[0][i]
+            Note[0][i] = 
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -319,16 +491,16 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel44 = new javax.swing.JPanel();
         jLabel109 = new javax.swing.JLabel();
         NA358O = new javax.swing.JPanel();
-        N2_384O = new javax.swing.JLabel();
-        N1_384O = new javax.swing.JLabel();
-        N3_384O = new javax.swing.JLabel();
-        N4_384O = new javax.swing.JLabel();
-        N5_384O = new javax.swing.JLabel();
-        N6_384O = new javax.swing.JLabel();
-        N7_384O = new javax.swing.JLabel();
-        N8_384O = new javax.swing.JLabel();
-        N9_384O = new javax.swing.JLabel();
-        N10_384O = new javax.swing.JLabel();
+        N2_358O = new javax.swing.JLabel();
+        N1_358O = new javax.swing.JLabel();
+        N3_358O = new javax.swing.JLabel();
+        N4_358O = new javax.swing.JLabel();
+        N5_358O = new javax.swing.JLabel();
+        N6_358O = new javax.swing.JLabel();
+        N7_358O = new javax.swing.JLabel();
+        N8_358O = new javax.swing.JLabel();
+        N9_358O = new javax.swing.JLabel();
+        N10_358O = new javax.swing.JLabel();
         jPanel46 = new javax.swing.JPanel();
         jLabel120 = new javax.swing.JLabel();
         Status358O = new javax.swing.JPanel();
@@ -2290,45 +2462,45 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel109.setText("Next Arrival");
 
-        N2_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N2_384O.setText("jLabel14");
-        N2_384O.setOpaque(true);
+        N2_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N2_358O.setText("jLabel14");
+        N2_358O.setOpaque(true);
 
-        N1_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N1_384O.setText("jLabel14");
-        N1_384O.setOpaque(true);
+        N1_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N1_358O.setText("jLabel14");
+        N1_358O.setOpaque(true);
 
-        N3_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N3_384O.setText("jLabel14");
-        N3_384O.setOpaque(true);
+        N3_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N3_358O.setText("jLabel14");
+        N3_358O.setOpaque(true);
 
-        N4_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N4_384O.setText("jLabel14");
-        N4_384O.setOpaque(true);
+        N4_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N4_358O.setText("jLabel14");
+        N4_358O.setOpaque(true);
 
-        N5_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N5_384O.setText("jLabel14");
-        N5_384O.setOpaque(true);
+        N5_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N5_358O.setText("jLabel14");
+        N5_358O.setOpaque(true);
 
-        N6_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N6_384O.setText("jLabel14");
-        N6_384O.setOpaque(true);
+        N6_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N6_358O.setText("jLabel14");
+        N6_358O.setOpaque(true);
 
-        N7_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N7_384O.setText("jLabel14");
-        N7_384O.setOpaque(true);
+        N7_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N7_358O.setText("jLabel14");
+        N7_358O.setOpaque(true);
 
-        N8_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N8_384O.setText("jLabel14");
-        N8_384O.setOpaque(true);
+        N8_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N8_358O.setText("jLabel14");
+        N8_358O.setOpaque(true);
 
-        N9_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N9_384O.setText("jLabel14");
-        N9_384O.setOpaque(true);
+        N9_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N9_358O.setText("jLabel14");
+        N9_358O.setOpaque(true);
 
-        N10_384O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N10_384O.setText("jLabel14");
-        N10_384O.setOpaque(true);
+        N10_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        N10_358O.setText("jLabel14");
+        N10_358O.setOpaque(true);
 
         javax.swing.GroupLayout NA358OLayout = new javax.swing.GroupLayout(NA358O);
         NA358O.setLayout(NA358OLayout);
@@ -2337,48 +2509,48 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(NA358OLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NA358OLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(N2_384O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N3_384O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N4_384O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N5_384O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N6_384O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N7_384O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N8_384O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N9_384O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(N10_384O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(N2_358O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N3_358O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N4_358O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N5_358O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N6_358O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N7_358O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N8_358O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N9_358O, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(N10_358O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(NA358OLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(NA358OLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(N1_384O, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                    .addComponent(N1_358O, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         NA358OLayout.setVerticalGroup(
             NA358OLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(NA358OLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(N2_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N2_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N3_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N3_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N4_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N4_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N5_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N5_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N6_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N6_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N7_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N7_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N8_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N8_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N9_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N9_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(N10_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(N10_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(NA358OLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(NA358OLayout.createSequentialGroup()
                     .addGap(21, 21, 21)
-                    .addComponent(N1_384O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(N1_358O, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(385, Short.MAX_VALUE)))
         );
 
@@ -3517,6 +3689,10 @@ public class InternalUser extends javax.swing.JFrame {
     private Cal DateFrom;
     private Cal DateTo;
     private int driverID;
+    private static ArrayList<Simulation> sim383;
+    private static ArrayList<Simulation> sim384;
+    private static ArrayList<Simulation> sim358O;
+    private static ArrayList<Simulation> sim358B;
     /**
      * @param args the command line arguments
      */
@@ -3553,6 +3729,15 @@ public class InternalUser extends javax.swing.JFrame {
         CURRENT_TAB = 0;
         //Connect to the database
         database.openBusDatabase();
+        GregorianCalendar date = new GregorianCalendar();
+        date.set(date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE), 0, 0, 0);
+        sim383 = UpdateSimulation.initialiseArrayListForRoute(65, date);
+        sim384 = UpdateSimulation.initialiseArrayListForRoute(66, date);
+        sim358O = UpdateSimulation.initialiseArrayListForRoute(67, date);
+        sim358B = UpdateSimulation.initialiseArrayListForRoute(68, date);
+        
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InternalUser().setVisible(true);
@@ -3608,45 +3793,45 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JTabbedPane InternalUserTab;
     private javax.swing.JPanel LoginPanel;
     private javax.swing.JLabel N10_358B;
+    private javax.swing.JLabel N10_358O;
     private javax.swing.JLabel N10_383;
     private javax.swing.JLabel N10_384;
-    private javax.swing.JLabel N10_384O;
     private javax.swing.JLabel N1_358B;
+    private javax.swing.JLabel N1_358O;
     private javax.swing.JLabel N1_383;
     private javax.swing.JLabel N1_384;
-    private javax.swing.JLabel N1_384O;
     private javax.swing.JLabel N2_358B;
+    private javax.swing.JLabel N2_358O;
     private javax.swing.JLabel N2_383;
     private javax.swing.JLabel N2_384;
-    private javax.swing.JLabel N2_384O;
     private javax.swing.JLabel N3_358B;
+    private javax.swing.JLabel N3_358O;
     private javax.swing.JLabel N3_383;
     private javax.swing.JLabel N3_384;
-    private javax.swing.JLabel N3_384O;
     private javax.swing.JLabel N4_358B;
+    private javax.swing.JLabel N4_358O;
     private javax.swing.JLabel N4_383;
     private javax.swing.JLabel N4_384;
-    private javax.swing.JLabel N4_384O;
     private javax.swing.JLabel N5_358B;
+    private javax.swing.JLabel N5_358O;
     private javax.swing.JLabel N5_383;
     private javax.swing.JLabel N5_384;
-    private javax.swing.JLabel N5_384O;
     private javax.swing.JLabel N6_358B;
+    private javax.swing.JLabel N6_358O;
     private javax.swing.JLabel N6_383;
     private javax.swing.JLabel N6_384;
-    private javax.swing.JLabel N6_384O;
     private javax.swing.JLabel N7_358B;
+    private javax.swing.JLabel N7_358O;
     private javax.swing.JLabel N7_383;
     private javax.swing.JLabel N7_384;
-    private javax.swing.JLabel N7_384O;
     private javax.swing.JLabel N8_358B;
+    private javax.swing.JLabel N8_358O;
     private javax.swing.JLabel N8_383;
     private javax.swing.JLabel N8_384;
-    private javax.swing.JLabel N8_384O;
     private javax.swing.JLabel N9_358B;
+    private javax.swing.JLabel N9_358O;
     private javax.swing.JLabel N9_383;
     private javax.swing.JLabel N9_384;
-    private javax.swing.JLabel N9_384O;
     private javax.swing.JPanel NA358B;
     private javax.swing.JPanel NA358O;
     private javax.swing.JPanel NA383;

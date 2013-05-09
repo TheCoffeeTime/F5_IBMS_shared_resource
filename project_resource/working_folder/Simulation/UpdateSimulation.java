@@ -51,10 +51,12 @@ public class UpdateSimulation {
         
         if(route == 66)
         {
+            
             for(int i = 0; i < simulation.size(); i++)
             {
               simulation.get(i).setCurrentTime(currentTime);
               simulation.get(i).getDate().add(Calendar.MINUTE, 1);
+              System.out.println("route " + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
               if(simulation.get(i).getNextArriveTime() <= currentTime)
               {
                 // the bus has come to the stop, so the next bus at the stop will be the next service
@@ -180,6 +182,7 @@ public class UpdateSimulation {
           {
             simulation.get(i).setCurrentTime(currentTime);
             simulation.get(i).getDate().add(Calendar.MINUTE, 1);
+            System.out.println("route " + route + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
             if(i == 5 && simulation.get(i).getServiceNumber() > 2 && route == 68)
             {
               j --;

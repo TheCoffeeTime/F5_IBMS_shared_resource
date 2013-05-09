@@ -253,7 +253,7 @@ public class TestDriverRequestHoliday {
        for(int i = 0; i < dateArray.length; i++)
        {
            dateArray[i] = new GregorianCalendar(2012, 11, i+1, 0, 0, 0);
-           temp = new Date(dateArray2[i].getTimeInMillis());
+           temp = new Date(dateArray[i].getTimeInMillis());
            setAllTrue(temp);
        }//for
        //30 days

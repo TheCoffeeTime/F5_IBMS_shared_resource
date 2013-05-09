@@ -26,9 +26,9 @@ public class ValidateHolidayRequest
     {
       System.out.println("OVER THE YEAR REQUEST");
       GregorianCalendar endOfThisYear
-        = new GregorianCalendar(dateFrom.YEAR, 11, 31, 0, 0, 0);
+        = new GregorianCalendar(dateFrom.get(Calendar.YEAR), 11, 31, 0, 0, 0);
       GregorianCalendar startOfNextYear 
-        = new GregorianCalendar(dateTo.YEAR, 0, 1, 0, 0, 0);
+        = new GregorianCalendar(dateTo.get(Calendar.YEAR), 0, 1, 0, 0, 0);
       if(!validateHolidayLength(dateFrom, endOfThisYear, driverID, true))
       {
         System.out.println("The request is not valid: This year");
@@ -63,8 +63,8 @@ public class ValidateHolidayRequest
   public static boolean checkDateInterval(GregorianCalendar dateFrom, GregorianCalendar dateTo, int driverID)
   {
     GregorianCalendar currentCal = new GregorianCalendar
-      (dateFrom.YEAR, dateFrom.MONTH, 
-      dateFrom.DAY_OF_MONTH, 0, 0, 0);
+      (dateFrom.get(Calendar.YEAR), dateFrom.get(Calendar.MONTH), 
+      dateFrom.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
     
     GregorianCalendar currentDate = new GregorianCalendar(dateFrom.get(Calendar.YEAR), dateFrom.get(Calendar.MONTH), 
                                 dateFrom.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
@@ -97,9 +97,9 @@ public class ValidateHolidayRequest
     if(!DriverInfo.isAvailable(driverID, newGivenDate))
     {
         systemMsg.message = "You cannot request a holiday on this date:"
-                             + givenDate.DATE + "/" +
-                            givenDate.MONTH + "/" + 
-                            givenDate.YEAR + 
+                             + givenDate.get(Calendar.DATE) + "/" +
+                            givenDate.get(Calendar.MONTH) + "/" + 
+                            givenDate.get(Calendar.YEAR) + 
                             " as it alrready is your holiday";
         return 2;
     }
@@ -156,7 +156,7 @@ public class ValidateHolidayRequest
     {
       systemMsg.message = 
         ("You have requested " + interval + 
-         (interval > 1? "days ": "day ") + "for " + dateTo.YEAR +
+         (interval > 1? " days ": " day ") + "for " + dateTo.get(Calendar.YEAR) +
          ", while the maximum is " + maxHoliday + 
          (maxHoliday > 1? "days ": "day "));    
       return false;
@@ -167,14 +167,10 @@ public class ValidateHolidayRequest
   //Written by: Nathan. Last modified: 18/02/13
   public static DateTime gregorianCalendarToDateTime(GregorianCalendar date)
   {
-      String dateString = date.toString();
-      //System.out.println(dateString);
-      String dateStringArray[] = dateString.split(" ", 6);
-      //System.out.println(dateStringArray[1] + dateStringArray[2] + dateStringArray[5]);
       int newMonth = date.get(Calendar.MONTH);
       int newDay = date.get(Calendar.DATE);
       int newYear = date.get(Calendar.YEAR);
-      return new DateTime(newYear, newMonth, newDay, 0, 0);
+      return new DateTime(newYear, newMonth + 1, newDay, 0, 0);
   }
   
   //Written by: Nathan. Last modified: 18/02/13

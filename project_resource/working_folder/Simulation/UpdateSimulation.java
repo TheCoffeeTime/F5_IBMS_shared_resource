@@ -299,7 +299,7 @@ public class UpdateSimulation {
           case 67:
             // get the times for the next service becasue there is only 4 stops on the first service
             int[] nextServiceTimes358Out = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), 1);
-            System.out.println(nextServiceTimes358Out.length);
+            //System.out.println(nextServiceTimes358Out.length);
             // the first service does not stop at all buses for the 358 journeys
             // so we need to get the correct ones, we use a temp index for this
             j = 0;
@@ -327,6 +327,7 @@ public class UpdateSimulation {
                }
             }
             break;
+              
           case 68:
             // get the times for the next service becasue there is only 4 stops on the first service
             int[] nextServiceTimes358back = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), 1);
@@ -476,7 +477,7 @@ public class UpdateSimulation {
         // keep showing the time
         while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
         {
-          updateSim(simArray, 66);
+          updateSim(simArray, route);
           System.out.println("current time " + simArray.get(0).getCurrentTime());
           k++;
         }

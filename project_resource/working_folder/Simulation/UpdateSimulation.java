@@ -91,6 +91,8 @@ public class UpdateSimulation {
               }
               // set the next arrival time accordingly
               simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
+              // make a string of the time so XX:XX
+              simulation.get(i).setTime(simulation.get(i).getNextArriveTime());
               // generate a random status (very rare is there a cancel or delay
               simulation.get(i).setStatus(randGenerateStatus());
               // reset any delays
@@ -143,6 +145,8 @@ public class UpdateSimulation {
                   tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
                   // set the next arrival time to the corresponding service time
                   simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
+                  // make a string of the time so XX:XX
+                  simulation.get(i).setTime(simulation.get(i).getNextArriveTime());
                   // also set the status to be cancelled
                   simulation.get(i).setStatus(1);
                   // and set the message appropriatley
@@ -182,6 +186,8 @@ public class UpdateSimulation {
               }
               
               simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
+              // make a string of the time so XX:XX
+              simulation.get(i).setTime(simulation.get(i).getNextArriveTime());
               // generate a random status (very rare is there a cancel or delay
               simulation.get(i).setStatus(randGenerateStatus());
               // reset any delays
@@ -235,6 +241,8 @@ public class UpdateSimulation {
                   tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
                   // set the next arrival time to the corresponding service time
                   simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
+                  // make a string of the time so XX:XX
+                  simulation.get(i).setTime(simulation.get(i).getNextArriveTime());
                   // also set the status to be cancelled
                   simulation.get(i).setStatus(1);
                   // and set the message appropriatley
@@ -282,7 +290,7 @@ public class UpdateSimulation {
               //System.out.println(serviceTimes[i]);
               if(i != 1 && i != 4 && i != 8)
               {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0);
+               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
                j++;
                simArray.add(sim);
               }
@@ -292,7 +300,7 @@ public class UpdateSimulation {
           case 66:
             for(int i = 0; i < busStops.length; i++)
             {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, serviceTimes[0], date, 0);
+               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
                simArray.add(sim);
             }
             break;
@@ -314,11 +322,11 @@ public class UpdateSimulation {
                  {
                     if(i < 8 )
                     {
-                      sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0);
+                      sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
                     }
                     else
                     {
-                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, serviceTimes[0], date, 1);
+                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
                     }
 
                     j++;
@@ -346,13 +354,13 @@ public class UpdateSimulation {
                   {
                    if(i > 6)
                    {
-                     sim = new Simulation(busStops[k], serviceTimes[k], 0, serviceTimes[0], date, 0);
+                     sim = new Simulation(busStops[k], serviceTimes[k], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
                      System.out.println("i" + i + ":" + serviceTimes[k] + BusStopInfo.getFullName(busStops[i]));
                      k++;
                    }
                    else
                    {
-                     sim = new Simulation(busStops[j], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1);
+                     sim = new Simulation(busStops[j], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
                      System.out.println("i" + i + ":" + nextServiceTimes358back[j] + BusStopInfo.getFullName(busStops[i]));
                    }
                    j++;
@@ -475,9 +483,13 @@ public class UpdateSimulation {
         
         // while the last service has not gone
         // keep showing the time
+        
+        System.out.println(TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
         while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
         {
           updateSim(simArray, route);
+          System.out.println("made");
+          updateSim(simArray, 66);
           System.out.println("current time " + simArray.get(0).getCurrentTime());
           k++;
         }

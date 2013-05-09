@@ -32,7 +32,11 @@ public class Simulation {
     
     private String message;
     
-    public Simulation(int reqBusStopID, int reqNextArriveTime, int reqStatus, int reqCurrentTime, GregorianCalendar reqDate, int reqServiceNumber)
+    private String stopName;
+    
+    private String time;
+    
+    public Simulation(int reqBusStopID, int reqNextArriveTime, int reqStatus, int reqCurrentTime, GregorianCalendar reqDate, int reqServiceNumber, String reqStopName)
     {
         busStopID = reqBusStopID;
         nextArriveTime = reqNextArriveTime;
@@ -44,6 +48,7 @@ public class Simulation {
         delay = 0;
         message = "-";
         cancel = 0;  
+        stopName = reqStopName;
     }
     
     public int getStatus()
@@ -89,6 +94,21 @@ public class Simulation {
     public int getDelay()
     {
       return delay;
+    }
+    
+    public int getCancel()
+    {
+      return cancel;
+    }
+    
+    public String getBusStopName()
+    {
+      return stopName;
+    }
+    
+    public String getTime()
+    {
+      return time;
     }
    
     public void setStatus(int newStatus)
@@ -139,6 +159,17 @@ public class Simulation {
     public void setCancel(int newCancel)
     {
       cancel = newCancel;
+    }
+    
+    public void setBusStopName(String reqName)
+    {
+      stopName = reqName;
+    }
+    
+    public void setTime(int reqTime)
+    {
+      String newTime = Integer.toString(getHours(reqTime)) + ":" + Integer.toString(getMinutes(reqTime));
+      time = newTime;
     }
     
     public int getHours(int time)

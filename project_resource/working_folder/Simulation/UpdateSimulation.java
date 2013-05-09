@@ -316,7 +316,8 @@ public class UpdateSimulation {
               if(i != 1 && i != 4 && i != 8)
               {
                Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
-               j++;
+               date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
+               date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
               }
             }
@@ -326,6 +327,8 @@ public class UpdateSimulation {
             for(int i = 0; i < busStops.length; i++)
             {
                Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+               date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
+               date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
             }
             break;
@@ -353,6 +356,8 @@ public class UpdateSimulation {
                     {
                       sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
                     }
+                    date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
+                    date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
 
                     j++;
                     simArray.add(sim);
@@ -391,7 +396,8 @@ public class UpdateSimulation {
                      //System.out.println("i" + i + ":" + nextServiceTimes358back[j] + BusStopInfo.getFullName(busStops[i]));
                      j++;
                    }
-                   
+                   date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
+                   date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                    simArray.add(sim);
                  }
                } 
@@ -498,7 +504,7 @@ public class UpdateSimulation {
     {
         database.openBusDatabase();
         
-        int route = 68;
+        int route = 65;
         
         GregorianCalendar date = new GregorianCalendar(2013, 5, 24, 0, 0, 0);
         
@@ -522,7 +528,7 @@ public class UpdateSimulation {
         int[] lastServices = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), noOfServices - 1);
         while(simArray.get(0).getCurrentTime() < lastServices[lastServices.length - 1])
         {
-          updateSim(simArray, 68);
+          updateSim(simArray, 65);
         }
     }
     

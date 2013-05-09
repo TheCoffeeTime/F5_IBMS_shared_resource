@@ -8,11 +8,18 @@ import RequestHoliday.Cal;
 import RequestHoliday.DriverHolidayRegistrationInterface;
 import RequestHoliday.Update;
 import RequestHoliday.ValidateHolidayRequest;
+import RosterGenerator.RoasterGenerator;
+import RosterGenerator.cellRenderer;
 import database.DriverInfo;
 import database.database;
 import java.awt.Component;
 import javax.swing.JTextPane;
 import java.awt.Dimension;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import javax.swing.table.DefaultTableModel;
+
+
 
 /**
  *
@@ -28,12 +35,14 @@ public class InternalUser extends javax.swing.JFrame {
         errorPanel.setVisible(false);
         jTextArea1.setLineWrap(true);
         jTextArea1.setEditable(false);
-        jTable3.setMinimumSize(new Dimension(2520, 500));
+        jTable3.setDefaultRenderer(Object.class, new cellRenderer());
+        jTable3.setAutoCreateRowSorter(true);
         for(int i = 0; i < 21; i++)
         {
             jTable3.getColumnModel().getColumn(i).setMinWidth(120);
+            jTable3.getColumnModel().getColumn(i).setCellRenderer(new cellRenderer());
         }
-        
+        InternalUserTab.set
         //Set table each column and row
     }
 
@@ -685,9 +694,46 @@ public class InternalUser extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //After the user has selected the Day of week, it will print out the result
+    //in the table. 
     private void combobox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combobox1ActionPerformed
-        // TODO add your handling code here:
+        
+        String selDay = combobox1.getSelectedItem().toString();
+        String[][] data = new String[][] {
+                            {"358 ", null, null, null, null, null, null, null, null, null,null, null, null, null, null, null, null, null, null, null, null},
+                            {"383", null, null, null, null, null, null, null, null,null, null, null, null, null, null, null, null, null, null, null, null},
+                            {"384", null, null, null, null, null, null, null,null, null, null, null, null, null, null, null, null, null, null, null, null}};
+        String[]  columnName = new String [] {"Service", "5:00 - 6:00" , "6:00 - 7:00", "7:00 - 8:00", "8:00 - 9:00", "9:00 - 10:00", 
+                        "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00", "13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", 
+                        "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00", "19:00 - 20:00", "20:00 - 21:00", "21:00 - 22:00", 
+                        "22:00 - 23:00", "23:00 - 00:00", "00:00 - 1:00"};
+        int dayID = 1;
+        if (selDay.compareTo("Monday") == 0)
+            dayID = 2;
+        else if(selDay.compareTo("Tuesday") == 0)
+            dayID = 3;
+        else if(selDay.compareTo("Wednesday") == 0)
+            dayID = 4;
+        else if(selDay.compareTo("Thursday") == 0)
+            dayID = 5;
+        else if(selDay.compareTo("Friday") == 0)
+            dayID = 6;
+        else if(selDay.compareTo("Saturday") == 0)
+            dayID = 7;
+        else if (selDay.compareTo("Sunday") == 0)
+            dayID = 1;
+        System.out.println("Date you have selected is "+selDay);
+        String[][] toBePrinted = RoasterGenerator.dayGUI(dayID, RoasterGenerator.roster);
+        for(int column = 1; column < 21; column++)
+                    {
+                        for(int row = 0; row < 3; row++)
+                        {
+                            data[row][column] = toBePrinted[row][column];
+                        }
+                    }
+                    
+                    jTable3.setModel(new DefaultTableModel(data,columnName));
     }//GEN-LAST:event_combobox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -735,6 +781,13 @@ public class InternalUser extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        GregorianCalendar dateFrom = new GregorianCalendar();
+        dateFrom.set(dateFrom.YEAR, dateFrom.MONTH, dateFrom.DAY_OF_MONTH, 0, 0, 0);
+        
+        GregorianCalendar dateTo = new GregorianCalendar();
+        dateTo.set(dateFrom.YEAR, dateFrom.MONTH, dateFrom.DAY_OF_MONTH, 0, 0, 0);
+        dateTo.add(Calendar.DAY_OF_MONTH, 6);
+        RoasterGenerator.GenerateRoaster(dateFrom, dateTo);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private Cal DateFrom;

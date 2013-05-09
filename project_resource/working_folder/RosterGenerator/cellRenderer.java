@@ -14,7 +14,7 @@ import java.awt.*;
  * @author Anthony
  */
 
-class cellRenderer extends JTextArea implements TableCellRenderer {
+public class cellRenderer extends JTextArea implements TableCellRenderer {
 
   public cellRenderer() {
     setLineWrap(true);

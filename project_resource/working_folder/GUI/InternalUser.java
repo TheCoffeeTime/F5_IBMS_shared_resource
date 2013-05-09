@@ -294,6 +294,11 @@ public class InternalUser extends javax.swing.JFrame {
     String textTime;
     private void updateSimulation()
     {
+        
+        UpdateSimulation.updateSim(sim383, 65);
+        UpdateSimulation.updateSim(sim384, 66);
+        UpdateSimulation.updateSim(sim358O, 67);
+        UpdateSimulation.updateSim(sim358B, 68);
         int hr, min;
         hr = date383.get(Calendar.HOUR);
         min = date383.get(Calendar.MINUTE);
@@ -323,11 +328,6 @@ public class InternalUser extends javax.swing.JFrame {
         date384.add(Calendar.MINUTE, 1);
         date358O.add(Calendar.MINUTE, 1);
         date358B.add(Calendar.MINUTE, 1);
-        UpdateSimulation.updateSim(sim383, 65);
-        UpdateSimulation.updateSim(sim384, 66);
-        UpdateSimulation.updateSim(sim358O, 67);
-        UpdateSimulation.updateSim(sim358B, 68);
-        
         for(int i = 0; i < sim383.size(); i++)
         {
             if(sim383.get(i).getChanged())

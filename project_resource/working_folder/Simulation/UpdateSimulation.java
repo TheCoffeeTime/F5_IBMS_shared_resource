@@ -333,6 +333,7 @@ public class UpdateSimulation {
             // the first service does not stop at all buses for the 358 journeys
             // so we need to get the correct ones, we use a temp index for this
             j = 0;
+            int k = 0;
             for(int i = 0; i < busStops.length; i++)
             {
               // ignore thornsett, Printers arms, and the database has some random extra stops
@@ -342,14 +343,15 @@ public class UpdateSimulation {
                   Simulation sim;
                   if(!((timetableKinds[1].equals(timetableKind) || (timetableKinds[2].equals(timetableKind))) && i == 6))
                   {
-                   if(i < 6)
+                   if(i > 6)
                    {
-                     sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0);
-                     System.out.println("i" + i + ":" + serviceTimes[j] + BusStopInfo.getFullName(busStops[i]));
+                     sim = new Simulation(busStops[k], serviceTimes[k], 0, serviceTimes[0], date, 0);
+                     System.out.println("i" + i + ":" + serviceTimes[k] + BusStopInfo.getFullName(busStops[i]));
+                     k++;
                    }
                    else
                    {
-                     sim = new Simulation(busStops[i], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1);
+                     sim = new Simulation(busStops[j], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1);
                      System.out.println("i" + i + ":" + nextServiceTimes358back[j] + BusStopInfo.getFullName(busStops[i]));
                    }
                    j++;
@@ -453,9 +455,9 @@ public class UpdateSimulation {
     {
         database.openBusDatabase();
         
-        int route = 66;
+        int route = 68;
         
-        GregorianCalendar date = new GregorianCalendar(2013, 5, 7, 0, 0, 0);
+        GregorianCalendar date = new GregorianCalendar(2013, 5, 23, 0, 0, 0);
         
         Date newDate = new Date(date.getTimeInMillis());
   

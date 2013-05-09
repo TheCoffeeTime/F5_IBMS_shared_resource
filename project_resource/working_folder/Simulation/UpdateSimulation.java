@@ -190,7 +190,6 @@ public class UpdateSimulation {
           for(int i = 0; i < simulation.size(); i++)
           {
             simulation.get(i).setCurrentTime(currentTime);
-            simulation.get(i).getDate().add(Calendar.MINUTE, 1);
             System.out.println("route " + route + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
             if(i == 5 && simulation.get(i).getServiceNumber() > 2 && (route == 68 || route == 67))
             {

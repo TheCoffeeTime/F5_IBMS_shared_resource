@@ -176,6 +176,7 @@ public class UpdateSimulation {
               tempServiceTimes = TimetableInfo.getServiceTimes(route, timetableKind, simulation.get(i).getServiceNumber());
               // set the next arrival time accordingly
               
+              System.out.println("service times length" + tempServiceTimes.length);
               // some bugs in the database, so might need to sort Array
               /*if(i != 0)
               {
@@ -341,29 +342,35 @@ public class UpdateSimulation {
             int[] nextServiceTimes358back = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), 1);
             // the first service does not stop at all buses for the 358 journeys
             // so we need to get the correct ones, we use a temp index for this
+            for(int l = 0; l < nextServiceTimes358back.length; l++)
+            {
+              System.out.println(nextServiceTimes358back[l]);
+            }
             j = 0;
             int k = 0;
             for(int i = 0; i < busStops.length; i++)
             {
               // ignore thornsett, Printers arms, and the database has some random extra stops
               // which we do not want
-               if(i < 11 && i != 8)
+             // System.out.println("times " + serviceTimes[i]);
+               if(i < 11 && i != 8 && i != 6)
                {
                   Simulation sim;
                   if(!((timetableKinds[1].equals(timetableKind) || (timetableKinds[2].equals(timetableKind))) && i == 6))
                   {
-                   if(i > 6)
+                   if(i < 4)
                    {
-                     sim = new Simulation(busStops[k], serviceTimes[k], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+                     sim = new Simulation(busStops[i], serviceTimes[k], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
                      System.out.println("i" + i + ":" + serviceTimes[k] + BusStopInfo.getFullName(busStops[i]));
                      k++;
                    }
                    else
                    {
-                     sim = new Simulation(busStops[j], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
+                     sim = new Simulation(busStops[i], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
                      System.out.println("i" + i + ":" + nextServiceTimes358back[j] + BusStopInfo.getFullName(busStops[i]));
+                     j++;
                    }
-                   j++;
+                   
                    simArray.add(sim);
                  }
                } 
@@ -428,6 +435,12 @@ public class UpdateSimulation {
       // so the next service is the one we want
       int serviceNo = simulation.get(index).getServiceNumber() + 1;
       
+      // now check that this does not go over the number of services
+      if(serviceNo <= TimetableInfo.getNumberOfServices(route, timetableKind))
+      {
+        return;
+      }
+      
       int[] serviceTimes = TimetableInfo.getServiceTimes(route, timetableKind, serviceNo);
       
       // update the nextArriveTime accordingly
@@ -466,7 +479,7 @@ public class UpdateSimulation {
         
         int route = 68;
         
-        GregorianCalendar date = new GregorianCalendar(2013, 5, 23, 0, 0, 0);
+        GregorianCalendar date = new GregorianCalendar(2013, 5, 24, 0, 0, 0);
         
         Date newDate = new Date(date.getTimeInMillis());
   
@@ -486,7 +499,9 @@ public class UpdateSimulation {
         
         System.out.println(TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
         System.out.println(simArray.get(simArray.size() - 1).getServiceNumber());
-        while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)))
+        int noOfServices = TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate));
+        int[] lastServices = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), noOfServices - 1);
+        while(simArray.get(0).getCurrentTime() < lastServices[lastServices.length - 1])
         {
           updateSim(simArray, 68);
           System.out.println("current time " + simArray.get(0).getCurrentTime());

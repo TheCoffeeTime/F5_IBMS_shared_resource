@@ -168,7 +168,8 @@ public class Simulation {
     
     public void setTime(int reqTime)
     {
-      String newTime = Integer.toString(getHours(reqTime)) + ":" + Integer.toString(getMinutes(reqTime));
+      String minutes = getMinutes(reqTime) < 10? "0" + getMinutes(reqTime) : Integer.toString(getMinutes(reqTime));
+      String newTime = Integer.toString(getHours(reqTime)) + ":" + (minutes);
       time = newTime;
     }
     

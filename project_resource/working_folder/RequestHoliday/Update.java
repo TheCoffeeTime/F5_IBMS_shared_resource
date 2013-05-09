@@ -34,8 +34,8 @@ public class Update {
         DriverInfo.setHolidaysTaken(driverID, holidayLength+oldLength);
         System.out.println("2");
         GregorianCalendar currentCal = new GregorianCalendar
-            (dateFrom.YEAR, dateFrom.MONTH, 
-             dateFrom.DATE, 0, 0, 0);
+            (dateFrom.get(Calendar.YEAR), dateFrom.get(Calendar.MONTH), 
+             dateFrom.get(Calendar.DATE), 0, 0, 0);
          
         GregorianCalendar currentDate = new GregorianCalendar(dateFrom.YEAR, dateFrom.MONTH,
                                     dateFrom.DATE, 0, 0, 0);
@@ -47,7 +47,7 @@ public class Update {
             DriverInfo.setAvailable(driverID, copyOfCurrentDate, false);
             currentCal.add(Calendar.DATE, 1);
             currentDate.set(currentCal.get(Calendar.YEAR), currentCal.get(Calendar.MONTH), currentCal.get(Calendar.DATE));
-            System.out.println("UPDATED!");
+            System.out.println(currentCal.get(Calendar.DATE));
             
 
         }while(!currentDate.after(dateTo));

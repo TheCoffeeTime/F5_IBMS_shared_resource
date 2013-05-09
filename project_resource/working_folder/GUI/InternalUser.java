@@ -21,29 +21,49 @@ import javax.swing.table.DefaultTableModel;
 
 
 
+//Array of components contianing tabs. 
+
 /**
  *
  * @author Thanakorn
  */
 public class InternalUser extends javax.swing.JFrame {
 
+    private int tabSize = 4;
+    private Component[] tabs; 
     /**
-     * Creates new form InternalUser
+     * Tabs representations are: 0 = Login, 1 = Request holiday, 2 = Controller UI, 3 = Roster. 
+     * @author Thanakorn Tuanwachat
+     * 
      */
     public InternalUser() {
         initComponents();
+        //Error pane in the login page
         errorPanel.setVisible(false);
+        //Text area in the request holiday page (status text area)
         jTextArea1.setLineWrap(true);
         jTextArea1.setEditable(false);
+        //To wrap the text in each cell in the Roster tab
         jTable3.setDefaultRenderer(Object.class, new cellRenderer());
         jTable3.setAutoCreateRowSorter(true);
+        //Set the column size and cell renender for each column in the Roster tab
         for(int i = 0; i < 21; i++)
         {
             jTable3.getColumnModel().getColumn(i).setMinWidth(120);
             jTable3.getColumnModel().getColumn(i).setCellRenderer(new cellRenderer());
         }
-        InternalUserTab.set
-        //Set table each column and row
+        //Create an array of tabs
+        tabs = new Component[tabSize];
+        //Initialise the array of tabs. 
+        for(int i = 0; i < tabSize; i++)
+        {
+            tabs[i] = InternalUserTab.getComponent(i);
+        }
+        //Remove all the tabs in the interface and only add one which is login.
+        InternalUserTab.removeAll();
+        InternalUserTab.add(tabs[0]);
+        
+        
     }
 
     /**
@@ -759,9 +779,13 @@ public class InternalUser extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         driverID = DriverInfo.findDriver(loginTextField.getText());
         //2869 - driver ID to check
+        //Check if the driver ID exist. 
         if (driverID!=0)
         {
             //DriverHolidayRegistrationInterface.createGUI(dirverID);
+            //Remove the current tab
+            InternalUserTab.remove(0);
+            InternalUserTab.add(tabs[REQUEST_H]);
             DateFrom = new Cal(driverID);
             dateFromPanel.add(DateFrom);
             DateTo = new Cal(driverID);
@@ -796,6 +820,7 @@ public class InternalUser extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    private static int LOGIN, REQUEST_H, CONTROLLER_UI, ROSTER, CURRENT_TAB;
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -821,6 +846,12 @@ public class InternalUser extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        //Initialise variables
+        LOGIN = 0;
+        REQUEST_H = 1;
+        CONTROLLER_UI = 2;
+        ROSTER = 3;
+        CURRENT_TAB = 0;
         //Connect to the database
         database.openBusDatabase();
         java.awt.EventQueue.invokeLater(new Runnable() {

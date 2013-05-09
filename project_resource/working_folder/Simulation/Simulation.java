@@ -192,16 +192,16 @@ public class Simulation {
       switch(rand)
       {
         case 0:
-          message = "The Driver is ill, this service has be cancelled. We apoigise for the inconvenience";
+          message = "D1";
           break;
         case 1:
-          message = "The Bus has broke down, this service has be cancelled. We apoigise for the inconvenience";
+          message = "D2";
           break;
         case 2:
-          message = "There has been a flood, this service has be cancelled. We apoigise for the inconvenience";
+          message = "D3";
           break;
         default: 
-          message = "There has been an earthquake, this service has be cancelled. We apoigise for the inconvenience";
+          message = "D4";
           break;
       }
       return message;
@@ -216,16 +216,16 @@ public class Simulation {
       switch(rand)
       {
         case 0:
-          message = "The Driver is ill, this service has be delayed. We apoigise for the inconvenience";
+          message = "D1";
           break;
         case 1:
-          message = "The Bus has broke down, this service has be delayed. We apoigise for the inconvenience";
+          message = "D2";
           break;
         case 2:
-          message = "There has been a flood, this service has be delayed. We apoigise for the inconvenience";
+          message = "D3";
           break;
         default: 
-          message = "There has been an earthquake, this service has be delayed. We apoigise for the inconvenience";
+          message = "D4";
           break;
       }
       return message;

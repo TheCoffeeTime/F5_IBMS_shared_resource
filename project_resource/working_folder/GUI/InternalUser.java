@@ -294,30 +294,27 @@ public class InternalUser extends javax.swing.JFrame {
     String textTime;
     private void updateSimulation()
     {
-        
+        System.out.println("Increase 383");
         UpdateSimulation.updateSim(sim383, 65);
-        UpdateSimulation.updateSim(sim384, 66);
-        UpdateSimulation.updateSim(sim358O, 67);
-        UpdateSimulation.updateSim(sim358B, 68);
         int hr, min;
         hr = date383.get(Calendar.HOUR);
         min = date383.get(Calendar.MINUTE);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
         textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
         clock383.setText(textTime);
-        
+        UpdateSimulation.updateSim(sim384, 66);
         hr = date384.get(Calendar.HOUR);
         min = date384.get(Calendar.MINUTE);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
         textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
         clock384.setText(textTime);
-        
+        UpdateSimulation.updateSim(sim358O, 67);
         hr = date358O.get(Calendar.HOUR);
         min = date358O.get(Calendar.MINUTE);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
         textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
         clock358O.setText(textTime);
-        
+        UpdateSimulation.updateSim(sim358B, 68);
         hr = date358B.get(Calendar.HOUR);
         min = date358B.get(Calendar.MINUTE);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
@@ -3594,12 +3591,9 @@ public class InternalUser extends javax.swing.JFrame {
                     .addComponent(jLabel34))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jLabel35)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jLabel35)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
                 .addContainerGap(200, Short.MAX_VALUE)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -3645,9 +3639,7 @@ public class InternalUser extends javax.swing.JFrame {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addGroup(jPanel39Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15)))
+                    .addComponent(jLabel15))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel39Layout.setVerticalGroup(
@@ -3668,7 +3660,7 @@ public class InternalUser extends javax.swing.JFrame {
 
         jLabel30.setText("Area");
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Asda/Sainsbury's", "Bus Station", "Back of Beyond", "Corcoran Drive", "Dialstone Lane/Hillcrest Road", "Frog and Diver Arms", "Grouse Inn", "Henry Street", "Intermediate Road", "Lower Bents Lane/Stockport Road", "Little Hayfield", "Navigation Hotel", "Norfolk Arms", "Ollerset View Hospital", "Printers Arms", "Royal Oak", "Train Station" }));
 
         jLabel31.setText("Bus stop");
 
@@ -3683,9 +3675,7 @@ public class InternalUser extends javax.swing.JFrame {
                         .addComponent(jComboBox12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addGroup(jPanel37Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel31)))
+                    .addComponent(jLabel31))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel37Layout.setVerticalGroup(
@@ -4260,18 +4250,10 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox10;
     private javax.swing.JComboBox jComboBox11;
     private javax.swing.JComboBox jComboBox12;
     private javax.swing.JComboBox jComboBox13;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
-    private javax.swing.JComboBox jComboBox6;
-    private javax.swing.JComboBox jComboBox7;
-    private javax.swing.JComboBox jComboBox8;
-    private javax.swing.JComboBox jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel109;
@@ -4288,23 +4270,11 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel175;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel191;
     private javax.swing.JLabel jLabel193;
     private javax.swing.JLabel jLabel195;
     private javax.swing.JLabel jLabel197;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
@@ -4362,13 +4332,9 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
-    private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel44;
-    private javax.swing.JPanel jPanel45;
     private javax.swing.JPanel jPanel46;
-    private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel48;
-    private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;

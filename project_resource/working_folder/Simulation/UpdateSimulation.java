@@ -133,6 +133,8 @@ public class UpdateSimulation {
                 if((simulation.get(i).getServiceNumber() == simulation.get(i - 1).getServiceNumber()) &&
                     simulation.get(i - 1).getStatus() == 1)
                 {
+                  // set the cancellation time to be the current cancellation time
+                  simulation.get(i).setCancel(simulation.get(i).getNextArriveTime());
                   // now get the service number of the previous one
                   int serviceNo = simulation.get(i - 1).getServiceNumber();
                   // set the service number to be that service number
@@ -223,6 +225,8 @@ public class UpdateSimulation {
                 if((simulation.get(i).getServiceNumber() == simulation.get(i - 1).getServiceNumber()) &&
                     simulation.get(i - 1).getStatus() == 1)
                 {
+                  // set the cancellation time to be the current cancellation time
+                  simulation.get(i).setCancel(simulation.get(i).getNextArriveTime());
                   // now get the service number of the previous one
                   int serviceNo = simulation.get(i - 1).getServiceNumber();
                   // set the service number to be that service number
@@ -412,14 +416,17 @@ public class UpdateSimulation {
     {
       // so the next service is the one we want
       int serviceNo = simulation.get(index).getServiceNumber() + 1;
+      
       int[] serviceTimes = TimetableInfo.getServiceTimes(route, timetableKind, serviceNo);
       
       // update the nextArriveTime accordingly
       // set the message correctly
+      // set the cancel time so can be printed out
       for(int j = index; j < simulation.size(); j++)
       {
         if(simulation.get(j).getServiceNumber() == serviceNo)
         {
+          simulation.get(j).setCancel(simulation.get(j).getNextArriveTime());
           simulation.get(j).setNextArriveTime(serviceTimes[j]);
           simulation.get(j).setServiceNumber(serviceNo);
           simulation.get(j).setMessage("Service " + serviceNo + " at "

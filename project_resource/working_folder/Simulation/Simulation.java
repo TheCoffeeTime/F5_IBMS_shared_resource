@@ -24,6 +24,8 @@ public class Simulation {
     
     private int delay;
     
+    private int cancel;
+    
     private int serviceNumber;
     
     private GregorianCalendar date;
@@ -40,6 +42,8 @@ public class Simulation {
         changed = false;
         serviceNumber = reqServiceNumber;
         delay = 0;
+        message = "-";
+        cancel = 0;  
     }
     
     public int getStatus()
@@ -132,6 +136,11 @@ public class Simulation {
       message = newMessage;
     }
     
+    public void setCancel(int newCancel)
+    {
+      cancel = newCancel;
+    }
+    
     public int getHours(int time)
     {
         return (int)Math.floor(time / 60);
@@ -142,5 +151,52 @@ public class Simulation {
         return time % 60;
     }
     
+    public String getRandomCancelMessage()
+    {
+      int rand = (int) (2 * Math.random());
+      
+      String message = "";
+      
+      switch(rand)
+      {
+        case 0:
+          message = "The Driver is ill, this service has be cancelled. We apoigise for the inconvenience";
+          break;
+        case 1:
+          message = "The Bus has broke down, this service has be cancelled. We apoigise for the inconvenience";
+          break;
+        case 2:
+          message = "There has been a flood, this service has be cancelled. We apoigise for the inconvenience";
+          break;
+        default: 
+          message = "There has been an earthquake, this service has be cancelled. We apoigise for the inconvenience";
+          break;
+      }
+      return message;
+    }
     
+    public String getRandomDelayMessage()
+    {
+      int rand = (int) (2 * Math.random());
+      
+      String message = "";
+      
+      switch(rand)
+      {
+        case 0:
+          message = "The Driver is ill, this service has be delayed. We apoigise for the inconvenience";
+          break;
+        case 1:
+          message = "The Bus has broke down, this service has be delayed. We apoigise for the inconvenience";
+          break;
+        case 2:
+          message = "There has been a flood, this service has be delayed. We apoigise for the inconvenience";
+          break;
+        default: 
+          message = "There has been an earthquake, this service has be delayed. We apoigise for the inconvenience";
+          break;
+      }
+      return message;
+    } 
+}
 }

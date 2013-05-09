@@ -448,6 +448,7 @@ public class UpdateSimulation {
                                        + simulation.get(j).getMinutes(simulation.get(j).getNextArriveTime()) + 
                                        " delayed by " + simulation.get(j).getDelay());
           simulation.get(j).setDelay(delay);
+          simulation.get(j).setChanged(true);
           simulation.get(j).setNextArriveTime(simulation.get(j).getNextArriveTime() + delay);
           delay--;
         }
@@ -480,6 +481,7 @@ public class UpdateSimulation {
           simulation.get(j).setCancel(simulation.get(j).getNextArriveTime());
           simulation.get(j).setNextArriveTime(serviceTimes[j]);
           simulation.get(j).setServiceNumber(serviceNo);
+          simulation.get(j).setChanged(true);
           simulation.get(j).setMessage("Service " + serviceNo + " at "
                                        + simulation.get(j).getHours(simulation.get(j).getNextArriveTime()) +
                                        + simulation.get(j).getMinutes(simulation.get(j).getNextArriveTime()) + 

@@ -82,13 +82,13 @@ public class UpdateSimulation {
               System.out.println(tempServiceTimes.length + ":" + simulation.get(i).getServiceNumber());
               
               // some bugs in the database, so might need to sort Array
-              if(i != 0)
+              /*if(i != 0)
               {
                 if(tempServiceTimes[i] < tempServiceTimes[i - 1] && (tempServiceTimes[i] < 100))
                 {
                   tempServiceTimes = sortArray(tempServiceTimes);
                 }
-              }
+              }*/
               // set the next arrival time accordingly
               simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
               // make a string of the time so XX:XX
@@ -177,13 +177,13 @@ public class UpdateSimulation {
               // set the next arrival time accordingly
               
               // some bugs in the database, so might need to sort Array
-              if(i != 0)
+              /*if(i != 0)
               {
                 if(tempServiceTimes[i] < tempServiceTimes[i - 1])
                 {
                   tempServiceTimes = sortArray(tempServiceTimes);
                 }
-              }
+              }*/
               
               simulation.get(i).setNextArriveTime(tempServiceTimes[i]);
               // make a string of the time so XX:XX
@@ -485,9 +485,9 @@ public class UpdateSimulation {
         // keep showing the time
         
         System.out.println(TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
-        while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)));
+        System.out.println(simArray.get(simArray.size() - 1).getServiceNumber());
+        while(simArray.get(simArray.size() - 1).getServiceNumber() != TimetableInfo.getNumberOfServices(route, TimetableInfo.timetableKind(newDate)))
         {
-          System.out.println("made");
           updateSim(simArray, 66);
           System.out.println("current time " + simArray.get(0).getCurrentTime());
           k++;

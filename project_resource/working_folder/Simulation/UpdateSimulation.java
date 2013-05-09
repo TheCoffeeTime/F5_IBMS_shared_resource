@@ -36,6 +36,8 @@ public class UpdateSimulation {
         // now set the current time to the next minute
         int currentTime = simulation.get(0).getCurrentTime() + 1;
         
+        simulation.get(0).getDate().add(Calendar.MINUTE, 1);
+        
         int maxServices = TimetableInfo.getNumberOfServices(route, timetableKind);
         
         // array to hold any services we may have to get later on
@@ -56,7 +58,6 @@ public class UpdateSimulation {
             for(int i = 0; i < simulation.size(); i++)
             {
               simulation.get(i).setCurrentTime(currentTime);
-              simulation.get(i).getDate().add(Calendar.MINUTE, 1);
               System.out.println("route " + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
               if(simulation.get(i).getNextArriveTime() <= currentTime)
               {

@@ -87,7 +87,7 @@ public class InternalUser extends javax.swing.JFrame {
           updateSimulation();
         }
         };
-        new Timer(1000, taskPerformer).start();
+        new Timer(500, taskPerformer).start();
     }
     /*
      * @author Thanakorn Tuanwachat
@@ -267,6 +267,7 @@ public class InternalUser extends javax.swing.JFrame {
         Note[3][2] = NT3_358B;
         Note[3][3] = NT4_358B;
         Note[3][4] = NT5_358B;
+        Note[3][5] = NT6_358B;
         Note[3][6] = NT7_358B;
         Note[3][7] = NT8_358B;
         Note[3][8] = NT9_358B;
@@ -312,7 +313,7 @@ public class InternalUser extends javax.swing.JFrame {
             if(sim384.get(i).getChanged())
             {
                 BusStop[1][i].setText(sim384.get(i).getBusStopName());
-                NextArrival[0][i].setText(sim384.get(i).getTime());
+                NextArrival[1][i].setText(sim384.get(i).getTime());
                 if(sim384.get(i).getStatus() == 0)
                   Status[1][i].setText("On time");
                 else if(sim384.get(i).getStatus() == 1)
@@ -335,7 +336,7 @@ public class InternalUser extends javax.swing.JFrame {
             if(sim358O.get(i).getChanged())
             {
                 BusStop[2][i].setText(sim358O.get(i).getBusStopName());
-                NextArrival[0][i].setText(sim358O.get(i).getTime());
+                NextArrival[2][i].setText(sim358O.get(i).getTime());
                 
                 if(sim358O.get(i).getStatus() == 0)
                   Status[2][i].setText("On time");
@@ -359,7 +360,7 @@ public class InternalUser extends javax.swing.JFrame {
             if(sim358B.get(i).getChanged())
             {
                 BusStop[3][i].setText(sim358B.get(i).getBusStopName());
-                NextArrival[0][i].setText(sim358B.get(i).getTime());
+                NextArrival[3][i].setText(sim358B.get(i).getTime());
                 if(sim358B.get(i).getStatus() == 0)
                   Status[3][i].setText("On time");
                 else if(sim358B.get(i).getStatus() == 1)
@@ -3946,7 +3947,7 @@ public class InternalUser extends javax.swing.JFrame {
         //Connect to the database
         database.openBusDatabase();
         GregorianCalendar date = new GregorianCalendar();
-        date.set(date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE), 0, 0, 0);
+        date.set(2013, 5, 23, 0, 0, 0);
         sim383 = UpdateSimulation.initialiseArrayListForRoute(65, date);
         sim384 = UpdateSimulation.initialiseArrayListForRoute(66, date);
         sim358O = UpdateSimulation.initialiseArrayListForRoute(67, date);

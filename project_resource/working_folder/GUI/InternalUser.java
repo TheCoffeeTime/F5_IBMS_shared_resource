@@ -294,13 +294,35 @@ public class InternalUser extends javax.swing.JFrame {
     String textTime;
     private void updateSimulation()
     {
-        int hr = date.get(Calendar.HOUR);
-        int min = date.get(Calendar.MINUTE);
+        int hr, min;
+        hr = date383.get(Calendar.HOUR);
+        min = date383.get(Calendar.MINUTE);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
         textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
-        System.out.println(textTime);
-        mainClock.setText(textTime);
-        date.add(Calendar.MINUTE, 1);
+        clock383.setText(textTime);
+        
+        hr = date384.get(Calendar.HOUR);
+        min = date384.get(Calendar.MINUTE);
+        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
+        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
+        clock384.setText(textTime);
+        
+        hr = date358O.get(Calendar.HOUR);
+        min = date358O.get(Calendar.MINUTE);
+        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
+        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
+        clock358O.setText(textTime);
+        
+        hr = date358B.get(Calendar.HOUR);
+        min = date358B.get(Calendar.MINUTE);
+        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
+        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
+        clock358B.setText(textTime);
+            
+        date383.add(Calendar.MINUTE, 1);
+        date384.add(Calendar.MINUTE, 1);
+        date358O.add(Calendar.MINUTE, 1);
+        date358B.add(Calendar.MINUTE, 1);
         UpdateSimulation.updateSim(sim383, 65);
         UpdateSimulation.updateSim(sim384, 66);
         UpdateSimulation.updateSim(sim358O, 67);
@@ -533,7 +555,7 @@ public class InternalUser extends javax.swing.JFrame {
         NT9_383 = new javax.swing.JLabel();
         NT10_383 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
-        mainClock = new javax.swing.JLabel();
+        clock383 = new javax.swing.JLabel();
         jLabel191 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
@@ -592,7 +614,7 @@ public class InternalUser extends javax.swing.JFrame {
         NT9_384 = new javax.swing.JLabel();
         NT10_384 = new javax.swing.JLabel();
         jPanel40 = new javax.swing.JPanel();
-        jLabel192 = new javax.swing.JLabel();
+        clock384 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jPanel41 = new javax.swing.JPanel();
@@ -651,7 +673,7 @@ public class InternalUser extends javax.swing.JFrame {
         NT9_358O = new javax.swing.JLabel();
         NT10_358O = new javax.swing.JLabel();
         jPanel50 = new javax.swing.JPanel();
-        jLabel194 = new javax.swing.JLabel();
+        clock358O = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jPanel51 = new javax.swing.JPanel();
@@ -710,7 +732,7 @@ public class InternalUser extends javax.swing.JFrame {
         NT9_358B = new javax.swing.JLabel();
         NT10_358B = new javax.swing.JLabel();
         jPanel60 = new javax.swing.JPanel();
-        jLabel196 = new javax.swing.JLabel();
+        clock358B = new javax.swing.JLabel();
         jLabel197 = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -720,10 +742,17 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel27 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         jPanel33 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        jPanel35 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jPanel37 = new javax.swing.JPanel();
         jComboBox3 = new javax.swing.JComboBox();
         jComboBox4 = new javax.swing.JComboBox();
+        jPanel39 = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jComboBox2 = new javax.swing.JComboBox();
         jPanel29 = new javax.swing.JPanel();
         jPanel30 = new javax.swing.JPanel();
 
@@ -1776,9 +1805,9 @@ public class InternalUser extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        mainClock.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        mainClock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mainClock.setText("00:00");
+        clock383.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock383.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clock383.setText("00:00");
 
         jLabel191.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel191.setText("Clock");
@@ -1794,7 +1823,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addGap(0, 21, Short.MAX_VALUE)
-                    .addComponent(mainClock)
+                    .addComponent(clock383)
                     .addGap(0, 21, Short.MAX_VALUE)))
         );
         jPanel26Layout.setVerticalGroup(
@@ -1806,7 +1835,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addGap(0, 26, Short.MAX_VALUE)
-                    .addComponent(mainClock)
+                    .addComponent(clock383)
                     .addGap(0, 26, Short.MAX_VALUE)))
         );
 
@@ -2302,11 +2331,8 @@ public class InternalUser extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jLabel192.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel192.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel192, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+        clock384.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock384.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel193.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel193.setText("Clock");
@@ -2322,7 +2348,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel40Layout.createSequentialGroup()
                     .addGap(0, 21, Short.MAX_VALUE)
-                    .addComponent(jLabel192)
+                    .addComponent(clock384)
                     .addGap(0, 21, Short.MAX_VALUE)))
         );
         jPanel40Layout.setVerticalGroup(
@@ -2334,7 +2360,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel40Layout.createSequentialGroup()
                     .addGap(0, 26, Short.MAX_VALUE)
-                    .addComponent(jLabel192)
+                    .addComponent(clock384)
                     .addGap(0, 26, Short.MAX_VALUE)))
         );
 
@@ -2830,11 +2856,8 @@ public class InternalUser extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jLabel194.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel194.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel194, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+        clock358O.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock358O.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel195.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel195.setText("Clock");
@@ -2850,7 +2873,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel50Layout.createSequentialGroup()
                     .addGap(0, 21, Short.MAX_VALUE)
-                    .addComponent(jLabel194)
+                    .addComponent(clock358O)
                     .addGap(0, 21, Short.MAX_VALUE)))
         );
         jPanel50Layout.setVerticalGroup(
@@ -2862,7 +2885,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel50Layout.createSequentialGroup()
                     .addGap(0, 26, Short.MAX_VALUE)
-                    .addComponent(jLabel194)
+                    .addComponent(clock358O)
                     .addGap(0, 26, Short.MAX_VALUE)))
         );
 
@@ -3358,11 +3381,8 @@ public class InternalUser extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jLabel196.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel196.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel196, org.jdesktop.beansbinding.BeanProperty.create("text"));
-        bindingGroup.addBinding(binding);
+        clock358B.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock358B.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel197.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel197.setText("Clock");
@@ -3378,7 +3398,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel60Layout.createSequentialGroup()
                     .addGap(0, 21, Short.MAX_VALUE)
-                    .addComponent(jLabel196)
+                    .addComponent(clock358B)
                     .addGap(0, 21, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
@@ -3390,7 +3410,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel60Layout.createSequentialGroup()
                     .addGap(0, 26, Short.MAX_VALUE)
-                    .addComponent(jLabel196)
+                    .addComponent(clock358B)
                     .addGap(0, 26, Short.MAX_VALUE)))
         );
 
@@ -3539,43 +3559,124 @@ public class InternalUser extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, InsideLoginPanel, org.jdesktop.beansbinding.ELProperty.create("${background}"), jPanel33, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jTextField1.setText("jTextField1");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jTextField2.setText("jTextField2");
+
+        jTextField3.setText("jTextField3");
+
+        jCheckBox1.setText("jCheckBox1");
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jCheckBox1)
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox1))
+                .addGap(37, 37, 37))
+        );
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))))
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel33Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                        .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel33Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
@@ -3592,7 +3693,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
@@ -3820,6 +3921,10 @@ public class InternalUser extends javax.swing.JFrame {
         runSimulation = false;
     }//GEN-LAST:event_stopSimActionPerformed
 
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
     private Cal DateFrom;
     private Cal DateTo;
     private int driverID;
@@ -3828,17 +3933,19 @@ public class InternalUser extends javax.swing.JFrame {
     private static ArrayList<Simulation> sim384;
     private static ArrayList<Simulation> sim358O;
     private static ArrayList<Simulation> sim358B;
-    private static GregorianCalendar date;
+    private static GregorianCalendar date383, date384, date358O, date358B;
+    
     /**
      * @param args the command line arguments
      */
     private static int LOGIN, REQUEST_H, CONTROLLER_UI, ROSTER, CURRENT_TAB, SIM;
-    public static void main(String args[]) {
+    public static void main(String args[]) {    
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        database.openBusDatabase();
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -3846,7 +3953,8 @@ public class InternalUser extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } 
+        catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(InternalUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(InternalUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -3865,13 +3973,19 @@ public class InternalUser extends javax.swing.JFrame {
         CURRENT_TAB = 0;
         runSimulation = false;
         //Connect to the database
-        database.openBusDatabase();
-        date = new GregorianCalendar();
-        date.set(date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE), 0, 0, 0);
-        sim383 = UpdateSimulation.initialiseArrayListForRoute(65, date);
-        sim384 = UpdateSimulation.initialiseArrayListForRoute(66, date);
-        sim358O = UpdateSimulation.initialiseArrayListForRoute(67, date);
-        sim358B = UpdateSimulation.initialiseArrayListForRoute(68, date);
+        date383 = new GregorianCalendar();
+        date383.set(date383.get(Calendar.YEAR), date383.get(Calendar.MONTH), date383.get(Calendar.DATE), 0, 0, 0);
+        date384 = new GregorianCalendar();
+        date384.set(date384.get(Calendar.YEAR), date384.get(Calendar.MONTH), date384.get(Calendar.DATE), 0, 0, 0);
+        date358O = new GregorianCalendar();
+        date358O.set(date358O.get(Calendar.YEAR), date358O.get(Calendar.MONTH), date358O.get(Calendar.DATE), 0, 0, 0);
+        date358B = new GregorianCalendar();
+        date358B.set(date358B.get(Calendar.YEAR), date358B.get(Calendar.MONTH), date358B.get(Calendar.DATE), 0, 0, 0);
+        
+        sim383 = UpdateSimulation.initialiseArrayListForRoute(65, date383);
+        sim384 = UpdateSimulation.initialiseArrayListForRoute(66, date384);
+        sim358O = UpdateSimulation.initialiseArrayListForRoute(67, date358O);
+        sim358B = UpdateSimulation.initialiseArrayListForRoute(68, date358B);
         
         
         
@@ -4061,6 +4175,10 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JPanel Status358O;
     private javax.swing.JPanel Status383;
     private javax.swing.JPanel Status384;
+    private javax.swing.JLabel clock358B;
+    private javax.swing.JLabel clock358O;
+    private javax.swing.JLabel clock383;
+    private javax.swing.JLabel clock384;
     private javax.swing.JComboBox combobox1;
     private javax.swing.JPanel dateFromPanel;
     private javax.swing.JPanel dateToPanel;
@@ -4072,6 +4190,7 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
@@ -4091,11 +4210,8 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel175;
     private javax.swing.JLabel jLabel191;
-    private javax.swing.JLabel jLabel192;
     private javax.swing.JLabel jLabel193;
-    private javax.swing.JLabel jLabel194;
     private javax.swing.JLabel jLabel195;
-    private javax.swing.JLabel jLabel196;
     private javax.swing.JLabel jLabel197;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -4139,8 +4255,11 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
@@ -4175,9 +4294,11 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton loginButton;
     private javax.swing.JTextField loginTextField;
-    private javax.swing.JLabel mainClock;
     private javax.swing.JTextArea noteMessage;
     private javax.swing.JButton simBtn;
     private javax.swing.JButton startSim;

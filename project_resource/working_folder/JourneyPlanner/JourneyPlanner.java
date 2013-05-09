@@ -98,7 +98,6 @@ public class JourneyPlanner {
       int threshold = findThreshold(departureBusStopIndex, arrivalBusStopIndex, time, arriveBy, RouteServicesTimes);
       if (threshold == -1)
       {
-        //System.out.println("No services =(");
         return null;
       }
       // Create Journey:
@@ -249,7 +248,7 @@ public class JourneyPlanner {
     }
     else
     {
-      System.out.println("%%%%%%%% Journey Planner %%%%%%%%");
+      System.out.println("%%%%%%%%%%%%%%%% Journey Planner %%%%%%%%%%%%%%%%");
       for (int i = 0; i < Journeys.size(); i++)
       {
         System.out.println("Option " + (i+1) + ":");
@@ -257,9 +256,9 @@ public class JourneyPlanner {
         {
           Journeys.get(i).get(j).printJourney();
         }
-        System.out.println("-------------------------------");
+        System.out.println("------------------------------------------------");
       }
-      System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+      System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
   }
   
@@ -357,10 +356,7 @@ public class JourneyPlanner {
         {
           
           ArrayList<Journey> journeys = findOtherOptions(journey, arriveBy, RouteServicesTimes);
-          /*
-          possibleJourneys.add(journeys);
-          return possibleJourneys;
-          */
+
           for (int i = 0; i < journeys.size(); i++)
           {
             possibleJourneys.add(new ArrayList());
@@ -368,11 +364,8 @@ public class JourneyPlanner {
           }
           return possibleJourneys;         
         }
-        else
-        {
-          return null;
-        }
       }
+      return null;
     }
     else
     {
@@ -448,6 +441,5 @@ public class JourneyPlanner {
         return null;
       }      
     }
-    return null;
   }
 }

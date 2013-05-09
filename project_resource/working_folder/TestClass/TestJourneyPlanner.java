@@ -22,21 +22,27 @@ public class TestJourneyPlanner {
     
     // Input arguments
     /*
-    String departureAreaName = "Romiley";
-    String departureBusStopName = "Train Station";
+    String departureAreaName = "Stockport";
+    String departureBusStopName = "Bus Station";
     
-    String arrivalAreaName = "Stockport";
-    String arrivalBusStopName = "Bus Station";
-    */
+    String arrivalAreaName = "Marple";
+    String arrivalBusStopName = "Offerton Fold";
+    
     
     String departureAreaName = "Strines";
     String departureBusStopName = "Royal Oak";
     
     String arrivalAreaName = "Romiley";
     String arrivalBusStopName = "Corcoran Drive";
-     
+     */
     
-    GregorianCalendar date =  new GregorianCalendar(2013, 04, 22, 14, 47);
+    String departureAreaName = "Strines";
+    String departureBusStopName = "Royal Oak";
+    
+    String arrivalAreaName = "Stockport";
+    String arrivalBusStopName = "Bus Station";  
+    
+    GregorianCalendar date =  new GregorianCalendar(2013, 05, 4, 14, 47);
     
     boolean arriveBy = true;
     

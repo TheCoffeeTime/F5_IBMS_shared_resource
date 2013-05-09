@@ -39,7 +39,7 @@ public class Timetable {
     {
       timetable.add(new ArrayList());
       busstops.add(mostCommonBusStops[i]);
-
+      System.out.println("Route: " + routes[i]);
       int numberOfServices = TimetableInfo.getNumberOfServices(routes[i], date.getTime());
       
       for(int j = 0; j < numberOfServices; j++)
@@ -48,6 +48,7 @@ public class Timetable {
         int[] ServiceTimes = TimetableInfo.getServiceTimes(routes[i],date.getTime(),j);
 
         int k = 0;
+        System.out.println("TEST " + ServiceTimes.length);
         while(k < ServiceTimes.length && k < mostCommonBusStops[i].length)
         {
           timetable.get(i).get(j).add(ServiceTimes[k]);

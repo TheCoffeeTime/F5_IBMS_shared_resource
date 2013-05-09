@@ -48,7 +48,7 @@ public class Journey {
     arrivalTimeString = minutesToTime(arrivalTime);
   }
   
-  // Converts time in minutes into 00:00 string time representation
+  // Converts time in minutes to 00:00 string time representation
   public static String minutesToTime(int minutes)
   {
     int m = minutes % 60;
@@ -92,7 +92,7 @@ public class Journey {
   }
   
   // Methods to get integer representation of journey data.
-  // They are used to quickly find other possible journeys close to this one
+  // They are used to quickly find other possible journeys close to this best option
   public int getRoute()
   {
     return route;
@@ -123,6 +123,7 @@ public class Journey {
     return arrivalBusStopIndex;
   }
   
+  // Method to print information about a journey in a friendly way (used for testing)
   public void printJourney()
   {
     System.out.println("Route name: " + routeString + " ; "); 

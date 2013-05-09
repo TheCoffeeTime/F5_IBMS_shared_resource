@@ -34,11 +34,11 @@ public class TestJourneyPlanner {
     
     String arrivalAreaName = "Strines";
     String arrivalBusStopName = "Royal Oak";
+     
     
+    GregorianCalendar date =  new GregorianCalendar(2013, 04, 22, 8, 47);
     
-    GregorianCalendar date =  new GregorianCalendar(2013, 04, 22, 15, 47);
-    
-    boolean arriveBy = true;
+    boolean arriveBy = false;
     
     ArrayList<ArrayList<Journey>> myJourneys = JourneyPlanner.JourneyPlanner(departureAreaName, departureBusStopName,
                                                               arrivalAreaName, arrivalBusStopName, 

@@ -212,24 +212,31 @@ public class JourneyPlanner {
   
   public static void printJourneyPlanner(ArrayList<ArrayList<Journey>> Journeys)
   {
-    System.out.println("%%%%%%%% Journey Planner %%%%%%%%");
-    for (int i = 0; i < Journeys.get(0).size(); i++)
+    if (Journeys == null)
     {
-      System.out.println("Option " + (i+1) + ":");
-      for (int j = 0; j < Journeys.size(); j++)
-      {
-        Journeys.get(j).get(i).printJourney();
-      }
-      System.out.println("-------------------------------");
+      System.out.println("There are no journey options for your query.");
     }
-    System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    else
+    {
+      System.out.println("%%%%%%%% Journey Planner %%%%%%%%");
+      for (int i = 0; i < Journeys.get(0).size(); i++)
+      {
+        System.out.println("Option " + (i+1) + ":");
+        for (int j = 0; j < Journeys.size(); j++)
+        {
+          Journeys.get(j).get(i).printJourney();
+        }
+        System.out.println("-------------------------------");
+      }
+      System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+    }
   }
   
   public static ArrayList<ArrayList<Journey>> JourneyPlanner(String departureAreaName, String departureBusStopName,
                                                               String arrivalAreaName, String arrivalBusStopName, 
-                                                              GregorianCalendar date, boolean arriveBy,
-                                                              Timetable timetable)
+                                                              GregorianCalendar date, boolean arriveBy)
   {
+    Timetable timetable = new Timetable(date);
     ArrayList<ArrayList<Journey>> possibleJourneys = new ArrayList<ArrayList<Journey>>();
             
     int time = date.get(GregorianCalendar.HOUR_OF_DAY) * 60 + 
@@ -354,12 +361,7 @@ public class JourneyPlanner {
           ArrayList<Journey> journeys1 = findOtherOptions(journey1, arriveBy, RouteServicesTimes);
           possibleJourneys.add(journeys1);
           
-          return possibleJourneys;
-          /*
-          System.out.println("--------------------------------------------------");
-          journey.printJourney();
-          journey1.printJourney();
-          */         
+          return possibleJourneys;        
         }
         return null;
       }
@@ -382,11 +384,6 @@ public class JourneyPlanner {
           possibleJourneys.add(journeys);
           
           return possibleJourneys;
-          /*
-          System.out.println("--------------------------------------------------");
-          journey1.printJourney();
-          journey.printJourney();
-          */
         }
         return null;
       }      

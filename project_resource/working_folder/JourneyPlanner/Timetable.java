@@ -27,10 +27,10 @@ public class Timetable {
   
   int[] routes = BusStopInfo.getRoutes();
   
-  private int[][]kostilj = {{804, 805, 806, 807, 808, 809, 811, 813, 814},
-                            {793, 794, 796, 798, 799, 800, 801, 802, 803},
-                            {770, 772, 773, 775, 776, 777, 779, 780},
-                            {781, 782, 783, 784, 785, 786, 787, 788, 789}};
+  private int[][]mostCommonBusStops = {{804, 805, 806, 807, 808, 809, 811, 813, 814},
+                                       {793, 794, 796, 798, 799, 800, 801, 802, 803},
+                                       {770, 772, 773, 775, 776, 777, 779, 780},
+                                       {781, 782, 783, 784, 785, 786, 787, 788, 789}};
   
   // Creates local copy of the timetable
   public Timetable(GregorianCalendar date)
@@ -38,7 +38,7 @@ public class Timetable {
     for(int i = 0; i < NUMBER_OF_ROUTES; i++)
     {
       timetable.add(new ArrayList());
-      busstops.add(kostilj[i]);
+      busstops.add(mostCommonBusStops[i]);
 
       int numberOfServices = TimetableInfo.getNumberOfServices(routes[i], date.getTime());
       
@@ -48,7 +48,7 @@ public class Timetable {
         int[] ServiceTimes = TimetableInfo.getServiceTimes(routes[i],date.getTime(),j);
 
         int k = 0;
-        while(k < ServiceTimes.length && k < kostilj[i].length)
+        while(k < ServiceTimes.length && k < mostCommonBusStops[i].length)
         {
           timetable.get(i).get(j).add(ServiceTimes[k]);
           k++;

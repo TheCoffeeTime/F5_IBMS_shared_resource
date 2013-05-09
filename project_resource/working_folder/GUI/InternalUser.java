@@ -55,6 +55,17 @@ public class InternalUser extends javax.swing.JFrame {
         //Text area in the request holiday page (status text area)
         jTextArea1.setLineWrap(true);
         jTextArea1.setEditable(false);
+        noteMessage.setLineWrap(true);
+        noteMessage.setEditable(false);
+        noteMessage.setText("We apoigise for the inconvenience\n"
+                + "C1: The Driver is ill, this service has be cancelled.\n"
+                + "C2: The Bus has broke down, this service has be cancelled.\n"
+                + "C3: There has been a flood, this service has be cancelled.\n"
+                + "C4: There has been an earthquake, this service has be cancelled.\n"
+                + "D1: The Driver is ill, this service has be delayed. We apoigise for the inconvenience"
+                + "D2: The Bus has broke down, this service has be delayed\n"
+                + "D3: There has been a flood, this service has be delayed\n"
+                + "D4: There has been an earthquake, this service has be delayed");
         //To wrap the text in each cell in the Roster tab
         jTable3.setDefaultRenderer(Object.class, new cellRenderer());
         jTable3.setAutoCreateRowSorter(true);
@@ -301,10 +312,14 @@ public class InternalUser extends javax.swing.JFrame {
                 {
                   Note[0][i].setText(sim383.get(i).getRandomCancelMessage());
                 }//if
-                else
+                else if (sim383.get(i).getStatus() == 2)
                 {
                     Note[0][i].setText(sim383.get(i).getRandomDelayMessage());
                 }//else
+                else
+                {
+                    Note[0][i].setText("-");
+                }
             }//if
         }//for
         
@@ -324,10 +339,14 @@ public class InternalUser extends javax.swing.JFrame {
                 {
                   Note[1][i].setText(sim384.get(i).getRandomCancelMessage());
                 }//if
-                else
+                else if(sim384.get(i).getStatus() == 2)
                 {
                     Note[1][i].setText(sim384.get(i).getRandomDelayMessage());
                 }//else
+                else
+                {
+                  Note[1][i].setText("-");
+                }
             }//if
         }//for
         
@@ -348,9 +367,13 @@ public class InternalUser extends javax.swing.JFrame {
                 {
                   Note[2][i].setText(sim358O.get(i).getRandomCancelMessage());
                 }//if
-                else
+                else if (sim358O.get(i).getStatus() == 2)
                 {
                     Note[2][i].setText(sim358O.get(i).getRandomDelayMessage());
+                }//else
+                else
+                {
+                    Note[2][i].setText("-");
                 }//else
             }//if
         }//for
@@ -371,9 +394,13 @@ public class InternalUser extends javax.swing.JFrame {
                 {
                   Note[3][i].setText(sim358B.get(i).getRandomCancelMessage());
                 }//if
-                else
+                else if (sim358B.get(i).getStatus() == 2)
                 {
                     Note[3][i].setText(sim358B.get(i).getRandomDelayMessage());
+                }//else
+                else
+                {
+                    Note[3][i].setText("-");
                 }//else
             }//if
         }//for
@@ -455,7 +482,7 @@ public class InternalUser extends javax.swing.JFrame {
         B9_383 = new javax.swing.JLabel();
         B10_383 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        noteMessage = new javax.swing.JTextArea();
         jPanel23 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         NA383 = new javax.swing.JPanel();
@@ -1428,9 +1455,9 @@ public class InternalUser extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane3.setViewportView(jTextArea2);
+        noteMessage.setColumns(20);
+        noteMessage.setRows(5);
+        jScrollPane3.setViewportView(noteMessage);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setText("Next Arrival");
@@ -4253,12 +4280,12 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JButton loginButton;
     private javax.swing.JTextField loginTextField;
+    private javax.swing.JTextArea noteMessage;
     private javax.swing.JButton simBtn;
     private javax.swing.JButton startSim;
     private javax.swing.JButton stopSim;

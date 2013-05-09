@@ -29,14 +29,14 @@ public class TestJourneyPlanner {
     String arrivalBusStopName = "Bus Station";
     */
     
-    String departureAreaName = "Romiley";
-    String departureBusStopName = "Corcoran Drive";
+    String departureAreaName = "Strines";
+    String departureBusStopName = "Royal Oak";
     
-    String arrivalAreaName = "Strines";
-    String arrivalBusStopName = "Royal Oak";
+    String arrivalAreaName = "Romiley";
+    String arrivalBusStopName = "Corcoran Drive";
      
     
-    GregorianCalendar date =  new GregorianCalendar(2013, 04, 22, 8, 47);
+    GregorianCalendar date =  new GregorianCalendar(2013, 04, 22, 14, 47);
     
     boolean arriveBy = false;
     

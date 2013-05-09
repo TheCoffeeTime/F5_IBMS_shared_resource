@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class JourneyPlanner {
   
-  private static int findThreshold(int departureBusStopIndex, int arrivalBusStopIndex, int time, boolean arriveBy,
+  public static int findThreshold(int departureBusStopIndex, int arrivalBusStopIndex, int time, boolean arriveBy,
                             ArrayList<ArrayList<Integer>> RouteServicesTimes)
   {
     int threshold = -1;
@@ -98,7 +98,7 @@ public class JourneyPlanner {
       int threshold = findThreshold(departureBusStopIndex, arrivalBusStopIndex, time, arriveBy, RouteServicesTimes);
       if (threshold == -1)
       {
-        System.out.println("No services =(");
+        //System.out.println("No services =(");
         return null;
       }
       // Create Journey:
@@ -117,7 +117,7 @@ public class JourneyPlanner {
     return null;
   }
   
-  private static List getAllRelevantBusStops(String areaName, String busStopName)
+  public static List getAllRelevantBusStops(String areaName, String busStopName)
   {
     int area = BusStopInfo.findAreaByName(areaName);
     int[] allAreaBusStops = BusStopInfo.getBusStopsInArea(area);
@@ -134,7 +134,7 @@ public class JourneyPlanner {
     return allAreaBusStopsList;
   }
   
-  private static boolean isTimingPointOnRoute(int busStop, int route, Timetable timetable)
+  public static boolean isTimingPointOnRoute(int busStop, int route, Timetable timetable)
   {
     int[] busStops = timetable.getBusStops(route);
     for (int i = 0; i < busStops.length; i++)
@@ -147,7 +147,7 @@ public class JourneyPlanner {
     return false;
   }
   
-  private static Journey findJourney2(ArrayList routes, int time, boolean arriveBy, Timetable timetable,
+  public static Journey findJourney2(ArrayList routes, int time, boolean arriveBy, Timetable timetable,
                              List allDepartureAreaBusStopsList, List allArrivalAreaBusStopsList)
   {
     Journey journey;
@@ -165,7 +165,7 @@ public class JourneyPlanner {
     return null;
   }
   
-  private static ArrayList<Journey> findOtherOptions(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
+  public static ArrayList<Journey> findOtherOptions(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
   {
     ArrayList<Journey> journeys = new ArrayList<Journey>();
     journeys.add(coreJourney);
@@ -182,7 +182,7 @@ public class JourneyPlanner {
     int departureTime = 0;
     int arrivalTime = 0;
       
-    while(numberOfJourneys < 5 && serviceID > 0 && serviceID < RouteServicesTimes.size())
+    while(numberOfJourneys < 5 && serviceID > 0 && serviceID < RouteServicesTimes.size()-1)
     {      
       if (arriveBy == true)
       {
@@ -212,6 +212,8 @@ public class JourneyPlanner {
   
   public static void printJourneyPlanner(ArrayList<ArrayList<Journey>> Journeys)
   {
+    System.out.println("A -> BS " + Journeys.get(0).size());
+    System.out.println("BS -> B " + Journeys.get(1).size());
     if (Journeys == null)
     {
       System.out.println("There are no journey options for your query.");
@@ -351,13 +353,17 @@ public class JourneyPlanner {
           int newTime = journey.getArrivalTime();
           Journey journey1 = findJourney2(arrivalRoutes, newTime, false, timetable,
                              allBusStationBusStopsList, allArrivalAreaBusStopsList);
-          
+          if (journey1 == null)
+          {
+            return null;
+          }
           
           ArrayList<ArrayList<Integer>> RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
           ArrayList<Journey> journeys = findOtherOptions(journey, arriveBy, RouteServicesTimes);
           possibleJourneys.add(journeys);
           
           RouteServicesTimes = timetable.getRouteServicesTimes(journey.getRoute());
+         
           ArrayList<Journey> journeys1 = findOtherOptions(journey1, arriveBy, RouteServicesTimes);
           possibleJourneys.add(journeys1);
           

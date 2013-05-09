@@ -1366,7 +1366,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1375,7 +1374,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1384,7 +1382,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1393,7 +1390,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1402,7 +1398,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1411,7 +1406,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1420,7 +1414,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1429,7 +1422,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1438,7 +1430,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1447,7 +1438,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1573,7 +1563,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1582,7 +1571,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1591,7 +1579,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1600,7 +1587,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1609,7 +1595,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1618,7 +1603,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1627,7 +1611,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1636,7 +1619,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1645,7 +1627,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1654,7 +1635,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1765,7 +1745,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1774,7 +1753,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1783,7 +1761,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1792,7 +1769,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1801,7 +1777,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1810,7 +1785,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1819,7 +1793,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1828,7 +1801,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1837,7 +1809,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1846,7 +1817,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1876,9 +1846,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel13" min="-2" pref="26" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="Note383" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1960,7 +1930,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1969,7 +1938,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1978,7 +1946,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1987,7 +1954,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -1996,7 +1962,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2005,7 +1970,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2014,7 +1978,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2023,7 +1986,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2032,7 +1994,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2041,7 +2002,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2062,7 +2022,7 @@
                                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
-                                          <Component id="jLabel190" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mainClock" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2078,7 +2038,7 @@
                                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
-                                          <Component id="jLabel190" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mainClock" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2086,13 +2046,13 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JLabel" name="jLabel190">
+                            <Component class="javax.swing.JLabel" name="mainClock">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="36" style="0"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="00:00:00"/>
+                                <Property name="text" type="java.lang.String" value="00:00"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel191">
@@ -2301,7 +2261,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2310,7 +2269,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2319,7 +2277,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2328,7 +2285,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2337,7 +2293,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2346,7 +2301,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2355,7 +2309,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2364,7 +2317,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2373,7 +2325,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2382,7 +2333,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2402,6 +2352,9 @@
                                 <Property name="columns" type="int" value="20"/>
                                 <Property name="rows" type="int" value="5"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="noteMessage" sourcePath="${text}" target="jTextArea3" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -2508,7 +2461,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2517,7 +2469,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2526,7 +2477,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2535,7 +2485,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2544,7 +2493,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2553,7 +2501,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2562,7 +2509,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2571,7 +2517,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2580,7 +2525,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2589,7 +2533,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2700,7 +2643,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2709,7 +2651,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="fdghj"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2718,7 +2659,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2727,7 +2667,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2736,7 +2675,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2745,7 +2683,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2754,7 +2691,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2763,7 +2699,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2772,7 +2707,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2781,7 +2715,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2811,9 +2744,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel87" min="-2" pref="26" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="Note384" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2895,7 +2828,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2904,7 +2836,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2913,7 +2844,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2922,7 +2852,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2931,7 +2860,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2940,7 +2868,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2949,7 +2876,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2958,7 +2884,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2967,7 +2892,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -2976,7 +2900,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3027,8 +2950,10 @@
                                   <Font name="Tahoma" size="36" style="0"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="00:00:00"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="mainClock" sourcePath="${text}" target="jLabel192" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel193">
                               <Properties>
@@ -3236,7 +3161,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3245,7 +3169,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3254,7 +3177,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3263,7 +3185,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3272,7 +3193,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3281,7 +3201,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3290,7 +3209,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3299,7 +3217,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3308,7 +3225,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3317,7 +3233,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3337,6 +3252,9 @@
                                 <Property name="columns" type="int" value="20"/>
                                 <Property name="rows" type="int" value="5"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="noteMessage" sourcePath="${text}" target="jTextArea4" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -3443,7 +3361,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3452,7 +3369,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3461,7 +3377,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3470,7 +3385,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3479,7 +3393,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3488,7 +3401,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3497,7 +3409,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3506,7 +3417,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3515,7 +3425,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3524,7 +3433,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3635,7 +3543,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3644,7 +3551,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3653,7 +3559,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3662,7 +3567,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3671,7 +3575,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3680,7 +3583,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3689,7 +3591,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3698,7 +3599,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3707,7 +3607,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3716,7 +3615,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3746,9 +3644,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel131" min="-2" pref="26" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="Note358O" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -3830,7 +3728,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3839,7 +3736,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3848,7 +3744,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3857,7 +3752,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3866,7 +3760,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3875,7 +3768,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3884,7 +3776,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3893,7 +3784,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3902,7 +3792,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3911,7 +3800,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -3962,8 +3850,10 @@
                                   <Font name="Tahoma" size="36" style="0"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="00:00:00"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="mainClock" sourcePath="${text}" target="jLabel194" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel195">
                               <Properties>
@@ -4171,7 +4061,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4180,7 +4069,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4189,7 +4077,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4198,7 +4085,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4207,7 +4093,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4216,7 +4101,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4225,7 +4109,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4234,7 +4117,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4243,7 +4125,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4252,7 +4133,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4272,6 +4152,9 @@
                                 <Property name="columns" type="int" value="20"/>
                                 <Property name="rows" type="int" value="5"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="noteMessage" sourcePath="${text}" target="jTextArea5" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -4378,7 +4261,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4387,7 +4269,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4396,7 +4277,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4405,7 +4285,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4414,7 +4293,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4423,7 +4301,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4432,7 +4309,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4441,7 +4317,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4450,7 +4325,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4459,7 +4333,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4570,7 +4443,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4579,7 +4451,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4588,7 +4459,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4597,7 +4467,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4606,7 +4475,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4615,7 +4483,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4624,7 +4491,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4633,7 +4499,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4642,7 +4507,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4651,7 +4515,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4681,9 +4544,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel175" min="-2" pref="26" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="Note358B" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -4765,7 +4628,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4774,7 +4636,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4783,7 +4644,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4792,7 +4652,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4801,7 +4660,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4810,7 +4668,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4819,7 +4676,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4828,7 +4684,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4837,7 +4692,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4846,7 +4700,6 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="jLabel14"/>
                                     <Property name="opaque" type="boolean" value="true"/>
                                   </Properties>
                                 </Component>
@@ -4897,8 +4750,10 @@
                                   <Font name="Tahoma" size="36" style="0"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="00:00:00"/>
                               </Properties>
+                              <BindingProperties>
+                                <BindingProperty name="text" source="mainClock" sourcePath="${text}" target="jLabel196" targetPath="text" updateStrategy="0" immediately="false"/>
+                              </BindingProperties>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel197">
                               <Properties>
@@ -4969,6 +4824,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Start"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startSimActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="stopSim">
                   <Properties>
@@ -4977,6 +4835,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Stop"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stopSimActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

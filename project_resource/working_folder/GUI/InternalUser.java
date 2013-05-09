@@ -62,7 +62,7 @@ public class InternalUser extends javax.swing.JFrame {
                 + "C2: The Bus has broke down, this service has be cancelled.\n"
                 + "C3: There has been a flood, this service has be cancelled.\n"
                 + "C4: There has been an earthquake, this service has be cancelled.\n"
-                + "D1: The Driver is ill, this service has be delayed. We apoigise for the inconvenience"
+                + "D1: The Driver is ill, this service has be delayed. We apoigise for the inconvenience\n"
                 + "D2: The Bus has broke down, this service has be delayed\n"
                 + "D3: There has been a flood, this service has be delayed\n"
                 + "D4: There has been an earthquake, this service has be delayed");
@@ -95,7 +95,9 @@ public class InternalUser extends javax.swing.JFrame {
         
         ActionListener taskPerformer = new ActionListener() {
         public void actionPerformed(ActionEvent evt) {
-          updateSimulation();
+            //If user has set runsimulation to be on, then start running it. 
+            if(runSimulation)
+              updateSimulation();
         }
         };
         new Timer(500, taskPerformer).start();
@@ -289,8 +291,16 @@ public class InternalUser extends javax.swing.JFrame {
     /*
      * @Authod Thanakorn Tuanwachat
      */
+    String textTime;
     private void updateSimulation()
     {
+        int hr = date.get(Calendar.HOUR);
+        int min = date.get(Calendar.MINUTE);
+        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
+        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
+        System.out.println(textTime);
+        mainClock.setText(textTime);
+        date.add(Calendar.MINUTE, 1);
         UpdateSimulation.updateSim(sim383, 65);
         UpdateSimulation.updateSim(sim384, 66);
         UpdateSimulation.updateSim(sim358O, 67);
@@ -523,7 +533,7 @@ public class InternalUser extends javax.swing.JFrame {
         NT9_383 = new javax.swing.JLabel();
         NT10_383 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
-        jLabel190 = new javax.swing.JLabel();
+        mainClock = new javax.swing.JLabel();
         jLabel191 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
@@ -1344,43 +1354,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel10.setText("Bus Stop ");
 
         B2_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B2_383.setText("jLabel14");
         B2_383.setOpaque(true);
 
         B1_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B1_383.setText("jLabel14");
         B1_383.setOpaque(true);
 
         B3_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B3_383.setText("jLabel14");
         B3_383.setOpaque(true);
 
         B4_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B4_383.setText("jLabel14");
         B4_383.setOpaque(true);
 
         B5_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B5_383.setText("jLabel14");
         B5_383.setOpaque(true);
 
         B6_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B6_383.setText("jLabel14");
         B6_383.setOpaque(true);
 
         B7_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B7_383.setText("jLabel14");
         B7_383.setOpaque(true);
 
         B8_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B8_383.setText("jLabel14");
         B8_383.setOpaque(true);
 
         B9_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B9_383.setText("jLabel14");
         B9_383.setOpaque(true);
 
         B10_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B10_383.setText("jLabel14");
         B10_383.setOpaque(true);
 
         javax.swing.GroupLayout BStop383Layout = new javax.swing.GroupLayout(BStop383);
@@ -1463,43 +1463,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel11.setText("Next Arrival");
 
         N2_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N2_383.setText("jLabel14");
         N2_383.setOpaque(true);
 
         N1_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N1_383.setText("jLabel14");
         N1_383.setOpaque(true);
 
         N3_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N3_383.setText("jLabel14");
         N3_383.setOpaque(true);
 
         N4_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N4_383.setText("jLabel14");
         N4_383.setOpaque(true);
 
         N5_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N5_383.setText("jLabel14");
         N5_383.setOpaque(true);
 
         N6_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N6_383.setText("jLabel14");
         N6_383.setOpaque(true);
 
         N7_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N7_383.setText("jLabel14");
         N7_383.setOpaque(true);
 
         N8_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N8_383.setText("jLabel14");
         N8_383.setOpaque(true);
 
         N9_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N9_383.setText("jLabel14");
         N9_383.setOpaque(true);
 
         N10_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N10_383.setText("jLabel14");
         N10_383.setOpaque(true);
 
         javax.swing.GroupLayout NA383Layout = new javax.swing.GroupLayout(NA383);
@@ -1578,43 +1568,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel12.setText("Status");
 
         S2_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S2_383.setText("jLabel14");
         S2_383.setOpaque(true);
 
         S1_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S1_383.setText("jLabel14");
         S1_383.setOpaque(true);
 
         S3_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S3_383.setText("jLabel14");
         S3_383.setOpaque(true);
 
         S4_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S4_383.setText("jLabel14");
         S4_383.setOpaque(true);
 
         S5_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S5_383.setText("jLabel14");
         S5_383.setOpaque(true);
 
         S6_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S6_383.setText("jLabel14");
         S6_383.setOpaque(true);
 
         S7_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S7_383.setText("jLabel14");
         S7_383.setOpaque(true);
 
         S8_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S8_383.setText("jLabel14");
         S8_383.setOpaque(true);
 
         S9_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S9_383.setText("jLabel14");
         S9_383.setOpaque(true);
 
         S10_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S10_383.setText("jLabel14");
         S10_383.setOpaque(true);
 
         javax.swing.GroupLayout Status383Layout = new javax.swing.GroupLayout(Status383);
@@ -1693,43 +1673,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel13.setText("Note");
 
         NT2_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT2_383.setText("jLabel14");
         NT2_383.setOpaque(true);
 
         NT1_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT1_383.setText("jLabel14");
         NT1_383.setOpaque(true);
 
         NT3_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT3_383.setText("jLabel14");
         NT3_383.setOpaque(true);
 
         NT4_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT4_383.setText("jLabel14");
         NT4_383.setOpaque(true);
 
         NT5_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT5_383.setText("jLabel14");
         NT5_383.setOpaque(true);
 
         NT6_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT6_383.setText("jLabel14");
         NT6_383.setOpaque(true);
 
         NT7_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT7_383.setText("jLabel14");
         NT7_383.setOpaque(true);
 
         NT8_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT8_383.setText("jLabel14");
         NT8_383.setOpaque(true);
 
         NT9_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT9_383.setText("jLabel14");
         NT9_383.setOpaque(true);
 
         NT10_383.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT10_383.setText("jLabel14");
         NT10_383.setOpaque(true);
 
         javax.swing.GroupLayout Note383Layout = new javax.swing.GroupLayout(Note383);
@@ -1801,14 +1771,14 @@ public class InternalUser extends javax.swing.JFrame {
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Note383, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(18, 18, 18))
         );
 
-        jLabel190.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel190.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel190.setText("00:00:00");
+        mainClock.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        mainClock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mainClock.setText("00:00");
 
         jLabel191.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel191.setText("Clock");
@@ -1824,7 +1794,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addGap(0, 21, Short.MAX_VALUE)
-                    .addComponent(jLabel190)
+                    .addComponent(mainClock)
                     .addGap(0, 21, Short.MAX_VALUE)))
         );
         jPanel26Layout.setVerticalGroup(
@@ -1836,7 +1806,7 @@ public class InternalUser extends javax.swing.JFrame {
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addGap(0, 26, Short.MAX_VALUE)
-                    .addComponent(jLabel190)
+                    .addComponent(mainClock)
                     .addGap(0, 26, Short.MAX_VALUE)))
         );
 
@@ -1906,43 +1876,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel54.setText("Bus Stop ");
 
         B2_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B2_384.setText("jLabel14");
         B2_384.setOpaque(true);
 
         B1_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B1_384.setText("jLabel14");
         B1_384.setOpaque(true);
 
         B3_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B3_384.setText("jLabel14");
         B3_384.setOpaque(true);
 
         B4_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B4_384.setText("jLabel14");
         B4_384.setOpaque(true);
 
         B5_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B5_384.setText("jLabel14");
         B5_384.setOpaque(true);
 
         B6_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B6_384.setText("jLabel14");
         B6_384.setOpaque(true);
 
         B7_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B7_384.setText("jLabel14");
         B7_384.setOpaque(true);
 
         B8_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B8_384.setText("jLabel14");
         B8_384.setOpaque(true);
 
         B9_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B9_384.setText("jLabel14");
         B9_384.setOpaque(true);
 
         B10_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B10_384.setText("jLabel14");
         B10_384.setOpaque(true);
 
         javax.swing.GroupLayout BStop384Layout = new javax.swing.GroupLayout(BStop384);
@@ -2019,49 +1979,43 @@ public class InternalUser extends javax.swing.JFrame {
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, noteMessage, org.jdesktop.beansbinding.ELProperty.create("${text}"), jTextArea3, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         jScrollPane4.setViewportView(jTextArea3);
 
         jLabel65.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel65.setText("Next Arrival");
 
         N2_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N2_384.setText("jLabel14");
         N2_384.setOpaque(true);
 
         N1_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N1_384.setText("jLabel14");
         N1_384.setOpaque(true);
 
         N3_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N3_384.setText("jLabel14");
         N3_384.setOpaque(true);
 
         N4_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N4_384.setText("jLabel14");
         N4_384.setOpaque(true);
 
         N5_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N5_384.setText("jLabel14");
         N5_384.setOpaque(true);
 
         N6_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N6_384.setText("jLabel14");
         N6_384.setOpaque(true);
 
         N7_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N7_384.setText("jLabel14");
         N7_384.setOpaque(true);
 
         N8_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N8_384.setText("jLabel14");
         N8_384.setOpaque(true);
 
         N9_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N9_384.setText("jLabel14");
         N9_384.setOpaque(true);
 
         N10_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N10_384.setText("jLabel14");
         N10_384.setOpaque(true);
 
         javax.swing.GroupLayout NA384Layout = new javax.swing.GroupLayout(NA384);
@@ -2140,43 +2094,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel76.setText("Status");
 
         S2_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S2_384.setText("jLabel14");
         S2_384.setOpaque(true);
 
         S1_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S1_384.setText("fdghj");
         S1_384.setOpaque(true);
 
         S3_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S3_384.setText("jLabel14");
         S3_384.setOpaque(true);
 
         S4_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S4_384.setText("jLabel14");
         S4_384.setOpaque(true);
 
         S5_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S5_384.setText("jLabel14");
         S5_384.setOpaque(true);
 
         S6_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S6_384.setText("jLabel14");
         S6_384.setOpaque(true);
 
         S7_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S7_384.setText("jLabel14");
         S7_384.setOpaque(true);
 
         S8_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S8_384.setText("jLabel14");
         S8_384.setOpaque(true);
 
         S9_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S9_384.setText("jLabel14");
         S9_384.setOpaque(true);
 
         S10_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S10_384.setText("jLabel14");
         S10_384.setOpaque(true);
 
         javax.swing.GroupLayout Status384Layout = new javax.swing.GroupLayout(Status384);
@@ -2255,43 +2199,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel87.setText("Note");
 
         NT2_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT2_384.setText("jLabel14");
         NT2_384.setOpaque(true);
 
         NT1_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT1_384.setText("jLabel14");
         NT1_384.setOpaque(true);
 
         NT3_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT3_384.setText("jLabel14");
         NT3_384.setOpaque(true);
 
         NT4_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT4_384.setText("jLabel14");
         NT4_384.setOpaque(true);
 
         NT5_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT5_384.setText("jLabel14");
         NT5_384.setOpaque(true);
 
         NT6_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT6_384.setText("jLabel14");
         NT6_384.setOpaque(true);
 
         NT7_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT7_384.setText("jLabel14");
         NT7_384.setOpaque(true);
 
         NT8_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT8_384.setText("jLabel14");
         NT8_384.setOpaque(true);
 
         NT9_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT9_384.setText("jLabel14");
         NT9_384.setOpaque(true);
 
         NT10_384.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT10_384.setText("jLabel14");
         NT10_384.setOpaque(true);
 
         javax.swing.GroupLayout Note384Layout = new javax.swing.GroupLayout(Note384);
@@ -2363,14 +2297,16 @@ public class InternalUser extends javax.swing.JFrame {
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Note384, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(18, 18, 18))
         );
 
         jLabel192.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel192.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel192.setText("00:00:00");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel192, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
 
         jLabel193.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel193.setText("Clock");
@@ -2468,43 +2404,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel98.setText("Bus Stop ");
 
         B2_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B2_358O.setText("jLabel14");
         B2_358O.setOpaque(true);
 
         B1_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B1_358O.setText("jLabel14");
         B1_358O.setOpaque(true);
 
         B3_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B3_358O.setText("jLabel14");
         B3_358O.setOpaque(true);
 
         B4_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B4_358O.setText("jLabel14");
         B4_358O.setOpaque(true);
 
         B5_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B5_358O.setText("jLabel14");
         B5_358O.setOpaque(true);
 
         B6_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B6_358O.setText("jLabel14");
         B6_358O.setOpaque(true);
 
         B7_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B7_358O.setText("jLabel14");
         B7_358O.setOpaque(true);
 
         B8_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B8_358O.setText("jLabel14");
         B8_358O.setOpaque(true);
 
         B9_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B9_358O.setText("jLabel14");
         B9_358O.setOpaque(true);
 
         B10_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B10_358O.setText("jLabel14");
         B10_358O.setOpaque(true);
 
         javax.swing.GroupLayout BStop358OLayout = new javax.swing.GroupLayout(BStop358O);
@@ -2581,49 +2507,43 @@ public class InternalUser extends javax.swing.JFrame {
 
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, noteMessage, org.jdesktop.beansbinding.ELProperty.create("${text}"), jTextArea4, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         jScrollPane5.setViewportView(jTextArea4);
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel109.setText("Next Arrival");
 
         N2_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N2_358O.setText("jLabel14");
         N2_358O.setOpaque(true);
 
         N1_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N1_358O.setText("jLabel14");
         N1_358O.setOpaque(true);
 
         N3_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N3_358O.setText("jLabel14");
         N3_358O.setOpaque(true);
 
         N4_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N4_358O.setText("jLabel14");
         N4_358O.setOpaque(true);
 
         N5_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N5_358O.setText("jLabel14");
         N5_358O.setOpaque(true);
 
         N6_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N6_358O.setText("jLabel14");
         N6_358O.setOpaque(true);
 
         N7_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N7_358O.setText("jLabel14");
         N7_358O.setOpaque(true);
 
         N8_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N8_358O.setText("jLabel14");
         N8_358O.setOpaque(true);
 
         N9_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N9_358O.setText("jLabel14");
         N9_358O.setOpaque(true);
 
         N10_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N10_358O.setText("jLabel14");
         N10_358O.setOpaque(true);
 
         javax.swing.GroupLayout NA358OLayout = new javax.swing.GroupLayout(NA358O);
@@ -2702,43 +2622,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel120.setText("Status");
 
         S2_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S2_358O.setText("jLabel14");
         S2_358O.setOpaque(true);
 
         S1_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S1_358O.setText("jLabel14");
         S1_358O.setOpaque(true);
 
         S3_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S3_358O.setText("jLabel14");
         S3_358O.setOpaque(true);
 
         S4_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S4_358O.setText("jLabel14");
         S4_358O.setOpaque(true);
 
         S5_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S5_358O.setText("jLabel14");
         S5_358O.setOpaque(true);
 
         S6_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S6_358O.setText("jLabel14");
         S6_358O.setOpaque(true);
 
         S7_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S7_358O.setText("jLabel14");
         S7_358O.setOpaque(true);
 
         S8_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S8_358O.setText("jLabel14");
         S8_358O.setOpaque(true);
 
         S9_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S9_358O.setText("jLabel14");
         S9_358O.setOpaque(true);
 
         S10_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S10_358O.setText("jLabel14");
         S10_358O.setOpaque(true);
 
         javax.swing.GroupLayout Status358OLayout = new javax.swing.GroupLayout(Status358O);
@@ -2817,43 +2727,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel131.setText("Note");
 
         NT2_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT2_358O.setText("jLabel14");
         NT2_358O.setOpaque(true);
 
         NT1_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT1_358O.setText("jLabel14");
         NT1_358O.setOpaque(true);
 
         NT3_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT3_358O.setText("jLabel14");
         NT3_358O.setOpaque(true);
 
         NT4_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT4_358O.setText("jLabel14");
         NT4_358O.setOpaque(true);
 
         NT5_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT5_358O.setText("jLabel14");
         NT5_358O.setOpaque(true);
 
         NT6_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT6_358O.setText("jLabel14");
         NT6_358O.setOpaque(true);
 
         NT7_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT7_358O.setText("jLabel14");
         NT7_358O.setOpaque(true);
 
         NT8_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT8_358O.setText("jLabel14");
         NT8_358O.setOpaque(true);
 
         NT9_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT9_358O.setText("jLabel14");
         NT9_358O.setOpaque(true);
 
         NT10_358O.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT10_358O.setText("jLabel14");
         NT10_358O.setOpaque(true);
 
         javax.swing.GroupLayout Note358OLayout = new javax.swing.GroupLayout(Note358O);
@@ -2925,14 +2825,16 @@ public class InternalUser extends javax.swing.JFrame {
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel48Layout.createSequentialGroup()
                 .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Note358O, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(18, 18, 18))
         );
 
         jLabel194.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel194.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel194.setText("00:00:00");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel194, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
 
         jLabel195.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel195.setText("Clock");
@@ -3030,43 +2932,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel142.setText("Bus Stop ");
 
         B2_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B2_358B.setText("jLabel14");
         B2_358B.setOpaque(true);
 
         B1_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B1_358B.setText("jLabel14");
         B1_358B.setOpaque(true);
 
         B3_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B3_358B.setText("jLabel14");
         B3_358B.setOpaque(true);
 
         B4_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B4_358B.setText("jLabel14");
         B4_358B.setOpaque(true);
 
         B5_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B5_358B.setText("jLabel14");
         B5_358B.setOpaque(true);
 
         B6_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B6_358B.setText("jLabel14");
         B6_358B.setOpaque(true);
 
         B7_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B7_358B.setText("jLabel14");
         B7_358B.setOpaque(true);
 
         B8_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B8_358B.setText("jLabel14");
         B8_358B.setOpaque(true);
 
         B9_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B9_358B.setText("jLabel14");
         B9_358B.setOpaque(true);
 
         B10_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        B10_358B.setText("jLabel14");
         B10_358B.setOpaque(true);
 
         javax.swing.GroupLayout BStop358BLayout = new javax.swing.GroupLayout(BStop358B);
@@ -3143,49 +3035,43 @@ public class InternalUser extends javax.swing.JFrame {
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, noteMessage, org.jdesktop.beansbinding.ELProperty.create("${text}"), jTextArea5, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         jScrollPane6.setViewportView(jTextArea5);
 
         jLabel153.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel153.setText("Next Arrival");
 
         N2_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N2_358B.setText("jLabel14");
         N2_358B.setOpaque(true);
 
         N1_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N1_358B.setText("jLabel14");
         N1_358B.setOpaque(true);
 
         N3_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N3_358B.setText("jLabel14");
         N3_358B.setOpaque(true);
 
         N4_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N4_358B.setText("jLabel14");
         N4_358B.setOpaque(true);
 
         N5_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N5_358B.setText("jLabel14");
         N5_358B.setOpaque(true);
 
         N6_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N6_358B.setText("jLabel14");
         N6_358B.setOpaque(true);
 
         N7_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N7_358B.setText("jLabel14");
         N7_358B.setOpaque(true);
 
         N8_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N8_358B.setText("jLabel14");
         N8_358B.setOpaque(true);
 
         N9_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N9_358B.setText("jLabel14");
         N9_358B.setOpaque(true);
 
         N10_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        N10_358B.setText("jLabel14");
         N10_358B.setOpaque(true);
 
         javax.swing.GroupLayout NA358BLayout = new javax.swing.GroupLayout(NA358B);
@@ -3264,43 +3150,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel164.setText("Status");
 
         S2_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S2_358B.setText("jLabel14");
         S2_358B.setOpaque(true);
 
         S1_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S1_358B.setText("jLabel14");
         S1_358B.setOpaque(true);
 
         S3_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S3_358B.setText("jLabel14");
         S3_358B.setOpaque(true);
 
         S4_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S4_358B.setText("jLabel14");
         S4_358B.setOpaque(true);
 
         S5_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S5_358B.setText("jLabel14");
         S5_358B.setOpaque(true);
 
         S6_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S6_358B.setText("jLabel14");
         S6_358B.setOpaque(true);
 
         S7_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S7_358B.setText("jLabel14");
         S7_358B.setOpaque(true);
 
         S8_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S8_358B.setText("jLabel14");
         S8_358B.setOpaque(true);
 
         S9_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S9_358B.setText("jLabel14");
         S9_358B.setOpaque(true);
 
         S10_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        S10_358B.setText("jLabel14");
         S10_358B.setOpaque(true);
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
@@ -3379,43 +3255,33 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel175.setText("Note");
 
         NT2_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT2_358B.setText("jLabel14");
         NT2_358B.setOpaque(true);
 
         NT1_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT1_358B.setText("jLabel14");
         NT1_358B.setOpaque(true);
 
         NT3_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT3_358B.setText("jLabel14");
         NT3_358B.setOpaque(true);
 
         NT4_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT4_358B.setText("jLabel14");
         NT4_358B.setOpaque(true);
 
         NT5_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT5_358B.setText("jLabel14");
         NT5_358B.setOpaque(true);
 
         NT6_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT6_358B.setText("jLabel14");
         NT6_358B.setOpaque(true);
 
         NT7_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT7_358B.setText("jLabel14");
         NT7_358B.setOpaque(true);
 
         NT8_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT8_358B.setText("jLabel14");
         NT8_358B.setOpaque(true);
 
         NT9_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT9_358B.setText("jLabel14");
         NT9_358B.setOpaque(true);
 
         NT10_358B.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        NT10_358B.setText("jLabel14");
         NT10_358B.setOpaque(true);
 
         javax.swing.GroupLayout Note358BLayout = new javax.swing.GroupLayout(Note358B);
@@ -3487,14 +3353,16 @@ public class InternalUser extends javax.swing.JFrame {
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel58Layout.createSequentialGroup()
                 .addComponent(jLabel175, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Note358B, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(18, 18, 18))
         );
 
         jLabel196.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel196.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel196.setText("00:00:00");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, mainClock, org.jdesktop.beansbinding.ELProperty.create("${text}"), jLabel196, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
 
         jLabel197.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel197.setText("Clock");
@@ -3599,9 +3467,19 @@ public class InternalUser extends javax.swing.JFrame {
 
         startSim.setBackground(new java.awt.Color(153, 153, 153));
         startSim.setText("Start");
+        startSim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startSimActionPerformed(evt);
+            }
+        });
 
         stopSim.setBackground(new java.awt.Color(153, 153, 153));
         stopSim.setText("Stop");
+        stopSim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stopSimActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
@@ -3930,13 +3808,27 @@ public class InternalUser extends javax.swing.JFrame {
         RoasterGenerator.GenerateRoaster(dateFrom, dateTo);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void startSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startSimActionPerformed
+        // TODO add your handling code here:
+        //Set run simulation to be on
+        runSimulation = true;
+    }//GEN-LAST:event_startSimActionPerformed
+
+    private void stopSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopSimActionPerformed
+        // TODO add your handling code here:
+        //Set run simulation to be off
+        runSimulation = false;
+    }//GEN-LAST:event_stopSimActionPerformed
+
     private Cal DateFrom;
     private Cal DateTo;
     private int driverID;
+    private static boolean runSimulation; 
     private static ArrayList<Simulation> sim383;
     private static ArrayList<Simulation> sim384;
     private static ArrayList<Simulation> sim358O;
     private static ArrayList<Simulation> sim358B;
+    private static GregorianCalendar date;
     /**
      * @param args the command line arguments
      */
@@ -3971,10 +3863,11 @@ public class InternalUser extends javax.swing.JFrame {
         ROSTER = 3;
         SIM = 4;
         CURRENT_TAB = 0;
+        runSimulation = false;
         //Connect to the database
         database.openBusDatabase();
-        GregorianCalendar date = new GregorianCalendar();
-        date.set(2013, 5, 23, 0, 0, 0);
+        date = new GregorianCalendar();
+        date.set(date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE), 0, 0, 0);
         sim383 = UpdateSimulation.initialiseArrayListForRoute(65, date);
         sim384 = UpdateSimulation.initialiseArrayListForRoute(66, date);
         sim358O = UpdateSimulation.initialiseArrayListForRoute(67, date);
@@ -4197,7 +4090,6 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel175;
-    private javax.swing.JLabel jLabel190;
     private javax.swing.JLabel jLabel191;
     private javax.swing.JLabel jLabel192;
     private javax.swing.JLabel jLabel193;
@@ -4285,6 +4177,7 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JButton loginButton;
     private javax.swing.JTextField loginTextField;
+    private javax.swing.JLabel mainClock;
     private javax.swing.JTextArea noteMessage;
     private javax.swing.JButton simBtn;
     private javax.swing.JButton startSim;

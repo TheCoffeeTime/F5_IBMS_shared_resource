@@ -164,6 +164,14 @@ public class JourneyPlanner {
     }
     return null;
   }
+  /*
+  public static Journey findNextOption(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
+  {
+    Journey nextJourney;
+    
+    return nextJourney;
+  }
+  */
   
   public static ArrayList<Journey> findOtherOptions(Journey coreJourney, boolean arriveBy, ArrayList<ArrayList<Integer>> RouteServicesTimes)
   {
@@ -212,8 +220,6 @@ public class JourneyPlanner {
   
   public static void printJourneyPlanner(ArrayList<ArrayList<Journey>> Journeys)
   {
-    System.out.println("A -> BS " + Journeys.get(0).size());
-    System.out.println("BS -> B " + Journeys.get(1).size());
     if (Journeys == null)
     {
       System.out.println("There are no journey options for your query.");
@@ -221,12 +227,12 @@ public class JourneyPlanner {
     else
     {
       System.out.println("%%%%%%%% Journey Planner %%%%%%%%");
-      for (int i = 0; i < Journeys.get(0).size(); i++)
+      for (int i = 0; i < Journeys.size(); i++)
       {
         System.out.println("Option " + (i+1) + ":");
-        for (int j = 0; j < Journeys.size(); j++)
+        for (int j = 0; j < Journeys.get(i).size(); j++)
         {
-          Journeys.get(j).get(i).printJourney();
+          Journeys.get(i).get(j).printJourney();
         }
         System.out.println("-------------------------------");
       }
@@ -326,9 +332,18 @@ public class JourneyPlanner {
                              allDepartureAreaBusStopsList, allArrivalAreaBusStopsList);       
         if (journey != null)
         {
+          
           ArrayList<Journey> journeys = findOtherOptions(journey, arriveBy, RouteServicesTimes);
+          /*
           possibleJourneys.add(journeys);
           return possibleJourneys;
+          */
+          for (int i = 0; i < journeys.size(); i++)
+          {
+            possibleJourneys.add(new ArrayList());
+            possibleJourneys.get(i).add(journeys.get(i));
+          }
+          return possibleJourneys;         
         }
         else
         {

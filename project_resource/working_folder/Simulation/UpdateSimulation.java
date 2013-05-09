@@ -342,10 +342,7 @@ public class UpdateSimulation {
             int[] nextServiceTimes358back = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), 1);
             // the first service does not stop at all buses for the 358 journeys
             // so we need to get the correct ones, we use a temp index for this
-            for(int l = 0; l < nextServiceTimes358back.length; l++)
-            {
-              System.out.println(nextServiceTimes358back[l]);
-            }
+
             j = 0;
             int k = 0;
             for(int i = 0; i < busStops.length; i++)

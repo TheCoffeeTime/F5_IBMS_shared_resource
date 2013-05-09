@@ -178,7 +178,7 @@ public class UpdateSimulation {
           for(int i = 0; i < simulation.size(); i++)
           {
             simulation.get(i).setCurrentTime(currentTime);
-            if(i == 5 && simulation.get(i).getServiceNumber() > 2)
+            if(i == 5 && simulation.get(i).getServiceNumber() > 2 && route == 68)
             {
               j --;
               continue;

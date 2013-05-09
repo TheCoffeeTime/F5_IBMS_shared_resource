@@ -197,6 +197,5 @@ public class Simulation {
           break;
       }
       return message;
-    } 
-}
+    }
 }

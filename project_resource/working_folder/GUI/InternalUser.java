@@ -508,10 +508,11 @@ public class InternalUser extends javax.swing.JFrame {
     public void updateSimulationColour()
     {
         for(int i = 0; i < noOfRoute; i++)
+        {
             for(int j = 0; j < noOfBusStop; j++)
             {
                 //set everything to be red
-                if(Status[i][j].getText().compareTo("Cancelled") == 1)
+                if(Status[i][j].getText().compareTo("Cancelled") == 0)
                 {
                     Status[i][j].setBackground(new Color(255, 0, 0));
                     Note[i][j].setBackground(new Color(255, 0, 0));
@@ -520,7 +521,7 @@ public class InternalUser extends javax.swing.JFrame {
                     
                 }
                 //set everything to be orange
-                else if(Status[i][j].getText().compareTo("Delayed") == 1)
+                else if(Status[i][j].getText().compareTo("Delayed") == 0)
                 {
                     Status[i][j].setBackground(new Color(0, 204, 255));
                     Note[i][j].setBackground(new Color(0, 204, 255));
@@ -536,6 +537,7 @@ public class InternalUser extends javax.swing.JFrame {
                     BusStop[i][j].setBackground(new Color(240, 240, 240));
                 }
             }
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1494,6 +1496,11 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel12.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/23.png"))); // NOI18N
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -4064,7 +4071,7 @@ public class InternalUser extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 10, Short.MAX_VALUE)))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4074,7 +4081,7 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGroup(jPanel33Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel18))
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -5041,6 +5048,12 @@ public class InternalUser extends javax.swing.JFrame {
         //Add the reuqest holiday_tab
         InternalUserTab.add(tabs[JOURNEY_PLANNER]);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        InternalUserTab.remove(CURRENT_TAB);
+        //Add the reuqest holiday_tab
+        InternalUserTab.add(tabs[LOGIN]);
+    }//GEN-LAST:event_jButton9ActionPerformed
     public void refreshJourneyResult()
     {
         if(myJourneys == null)

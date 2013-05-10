@@ -368,31 +368,18 @@ public class InternalUser extends javax.swing.JFrame {
     private void updateSimulation()
     {
         System.out.println("Increase 383");
-        UpdateSimulation.updateSim(sim383, 65);
         int hr, min;
-        hr = sim383.get(0).getDate().get(Calendar.HOUR);
-        min = sim383.get(0).getDate().get(Calendar.MINUTE);
+        
+        hr = minForNathan / 60;
+        min = minForNathan - (hr * 60);
         textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
         textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
         clock383.setText(textTime);
-        UpdateSimulation.updateSim(sim384, 66);
-        hr = sim384.get(0).getDate().get(Calendar.HOUR);
-        min = sim384.get(0).getDate().get(Calendar.MINUTE);
-        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
-        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
-        clock384.setText(textTime);
-        UpdateSimulation.updateSim(sim358O, 67);
-        hr = sim358O.get(0).getDate().get(Calendar.HOUR);
-        min = sim358O.get(0).getDate().get(Calendar.MINUTE);
-        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
-        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
-        clock358O.setText(textTime);
-        UpdateSimulation.updateSim(sim358B, 68);
-        hr = sim358B.get(0).getDate().get(Calendar.HOUR);
-        min = sim358B.get(0).getDate().get(Calendar.MINUTE);
-        textTime = hr < 10? "0" + Integer.toString(hr): Integer.toString(hr);
-        textTime += ":" + (min < 10? "0" + Integer.toString(min): Integer.toString(min));
-        clock358B.setText(textTime);
+        UpdateSimulation.updateSim(sim383, 65, minForNathan);
+        UpdateSimulation.updateSim(sim384, 66, minForNathan);
+        UpdateSimulation.updateSim(sim358O, 67, minForNathan);
+        UpdateSimulation.updateSim(sim358B, 68, minForNathan);
+        minForNathan++;
             
         for(int i = 0; i < sim383.size(); i++)
         {
@@ -725,6 +712,7 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel40 = new javax.swing.JPanel();
         clock384 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
+        clock385 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jPanel41 = new javax.swing.JPanel();
         jPanel42 = new javax.swing.JPanel();
@@ -784,6 +772,7 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel50 = new javax.swing.JPanel();
         clock358O = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
+        clock386 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jPanel51 = new javax.swing.JPanel();
         jPanel52 = new javax.swing.JPanel();
@@ -843,6 +832,7 @@ public class InternalUser extends javax.swing.JFrame {
         jPanel60 = new javax.swing.JPanel();
         clock358B = new javax.swing.JLabel();
         jLabel197 = new javax.swing.JLabel();
+        clock387 = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         startSim = new javax.swing.JButton();
@@ -2635,6 +2625,12 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel193.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel193.setText("Clock");
 
+        clock385.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock385.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clock383, org.jdesktop.beansbinding.ELProperty.create("${text}"), clock385, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
@@ -2648,6 +2644,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 21, Short.MAX_VALUE)
                     .addComponent(clock384)
                     .addGap(0, 21, Short.MAX_VALUE)))
+            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel40Layout.createSequentialGroup()
+                    .addGap(47, 47, 47)
+                    .addComponent(clock385)
+                    .addContainerGap(48, Short.MAX_VALUE)))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2660,6 +2661,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 26, Short.MAX_VALUE)
                     .addComponent(clock384)
                     .addGap(0, 26, Short.MAX_VALUE)))
+            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel40Layout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addComponent(clock385)
+                    .addContainerGap(26, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
@@ -3157,6 +3163,12 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel195.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel195.setText("Clock");
 
+        clock386.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock386.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clock383, org.jdesktop.beansbinding.ELProperty.create("${text}"), clock386, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
         jPanel50Layout.setHorizontalGroup(
@@ -3170,6 +3182,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 21, Short.MAX_VALUE)
                     .addComponent(clock358O)
                     .addGap(0, 21, Short.MAX_VALUE)))
+            .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel50Layout.createSequentialGroup()
+                    .addGap(47, 47, 47)
+                    .addComponent(clock386)
+                    .addContainerGap(48, Short.MAX_VALUE)))
         );
         jPanel50Layout.setVerticalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3182,6 +3199,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 26, Short.MAX_VALUE)
                     .addComponent(clock358O)
                     .addGap(0, 26, Short.MAX_VALUE)))
+            .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel50Layout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addComponent(clock386)
+                    .addContainerGap(26, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
@@ -3682,6 +3704,12 @@ public class InternalUser extends javax.swing.JFrame {
         jLabel197.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel197.setText("Clock");
 
+        clock387.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clock387.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clock383, org.jdesktop.beansbinding.ELProperty.create("${text}"), clock387, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        bindingGroup.addBinding(binding);
+
         javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
         jPanel60.setLayout(jPanel60Layout);
         jPanel60Layout.setHorizontalGroup(
@@ -3695,6 +3723,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 21, Short.MAX_VALUE)
                     .addComponent(clock358B)
                     .addGap(0, 21, Short.MAX_VALUE)))
+            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel60Layout.createSequentialGroup()
+                    .addGap(47, 47, 47)
+                    .addComponent(clock387)
+                    .addContainerGap(48, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3707,6 +3740,11 @@ public class InternalUser extends javax.swing.JFrame {
                     .addGap(0, 26, Short.MAX_VALUE)
                     .addComponent(clock358B)
                     .addGap(0, 26, Short.MAX_VALUE)))
+            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel60Layout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addComponent(clock387)
+                    .addContainerGap(26, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
@@ -5121,6 +5159,7 @@ public class InternalUser extends javax.swing.JFrame {
     private static ArrayList<Simulation> sim358O;
     private static ArrayList<Simulation> sim358B;
     private static GregorianCalendar date383, date384, date358O, date358B;
+    private static int minForNathan;
     
     /**
      * @param args the command line arguments
@@ -5163,6 +5202,7 @@ public class InternalUser extends javax.swing.JFrame {
         JOURNEY_PLANNER = 5;
         JOURNEY_RESULT = 6;
         CURRENT_TAB = 0;
+        minForNathan = 250;
         runSimulation = false;
         //Connect to the database
         date383 = new GregorianCalendar();
@@ -5372,6 +5412,9 @@ public class InternalUser extends javax.swing.JFrame {
     private javax.swing.JLabel clock358O;
     private javax.swing.JLabel clock383;
     private javax.swing.JLabel clock384;
+    private javax.swing.JLabel clock385;
+    private javax.swing.JLabel clock386;
+    private javax.swing.JLabel clock387;
     private javax.swing.JComboBox combobox1;
     private javax.swing.JPanel dateFromPanel;
     private javax.swing.JComboBox dateFrom_area;

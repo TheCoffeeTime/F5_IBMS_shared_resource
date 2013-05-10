@@ -192,16 +192,16 @@ public class Simulation {
       switch(rand)
       {
         case 0:
-          message = "D1";
+          message = "C1";
           break;
         case 1:
-          message = "D2";
+          message = "C2";
           break;
         case 2:
-          message = "D3";
+          message = "C3";
           break;
         default: 
-          message = "D4";
+          message = "C4";
           break;
       }
       return message;

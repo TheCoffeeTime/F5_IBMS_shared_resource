@@ -1,35 +1,30 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package JourneyPlanner;
 
 import database.BusStopInfo;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
  * @author Nikita
  */
 public class Journey {
   
+  // Variables to store string representation of information about a journey
+  // Used for Interfaces and output.
   String routeString;
   String departureTimeString;
   String arrivalTimeString;
-  
-  int route;
   String departureBusStopString;
-  int departureTime;
   String arrivalBusStopString;
+  
+  // Variables to store integer representations of information about a journey
+  // Used for finding duration of the journey, other similar journeys etc.
+  int route;
+  int departureTime;
   int arrivalTime;
   int serviceID;
   int departureBusStopIndex;
   int arrivalBusStopIndex;
   
+  // Constructor
   public Journey(int pRoute, String pDepartureBusStopString, int pDepartureTime,
                              String pArrivalBusStopString,   int pArrivalTime,
                  int pServiceID, int pDepartureBusStopIndex, int pArrivalBusStopIndex)

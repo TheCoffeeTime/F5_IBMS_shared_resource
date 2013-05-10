@@ -337,7 +337,7 @@ public class UpdateSimulation {
               //System.out.println(serviceTimes[i]);
               if(i != 1 && i != 4 && i != 8)
               {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
+               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 300, date, 0, BusStopInfo.getFullName(busStops[i]));
                date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
@@ -349,7 +349,7 @@ public class UpdateSimulation {
           case 66:
             for(int i = 0; i < busStops.length; i++)
             {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
+               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, /*serviceTimes[0]*/ 300, date, 0, BusStopInfo.getFullName(busStops[i]));
                date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
@@ -373,11 +373,11 @@ public class UpdateSimulation {
                  {
                     if(i < 8 )
                     {
-                      sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
+                      sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 300, date, 0, BusStopInfo.getFullName(busStops[i]));
                     }
                     else
                     {
-                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, /*serviceTimes[0]*/ 250, date, 1, BusStopInfo.getFullName(busStops[i]));
+                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, /*serviceTimes[0]*/ 300, date, 1, BusStopInfo.getFullName(busStops[i]));
                     }
                     date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                     date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));

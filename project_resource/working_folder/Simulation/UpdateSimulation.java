@@ -23,7 +23,7 @@ public class UpdateSimulation {
     public static boolean remove = false;
     public static boolean made = false;
     
-    public static void updateSim(ArrayList<Simulation> simulation, int route)
+    public static void updateSim(ArrayList<Simulation> simulation, int route, int time)
     {
         Date date = new Date(simulation.get(0).getDate().getTimeInMillis());
         
@@ -34,9 +34,9 @@ public class UpdateSimulation {
         TimetableInfo.timetableKind[] timetableKinds = TimetableInfo.timetableKind.values();
          
         // now set the current time to the next minute
-        int currentTime = simulation.get(0).getCurrentTime() + 1;
+        int currentTime = time;
         
-        simulation.get(0).getDate().add(Calendar.MINUTE, 1);
+        //simulation.get(0).getDate().add(Calendar.MINUTE, 1);
         
         int maxServices = TimetableInfo.getNumberOfServices(route, timetableKind);
         
@@ -57,7 +57,7 @@ public class UpdateSimulation {
             for(int i = 0; i < simulation.size(); i++)
             {
               simulation.get(i).setCurrentTime(currentTime);
-              System.out.println("route " + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
+              //System.out.println("route " + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
               if(simulation.get(i).getNextArriveTime() <= currentTime)
               {
                 // the bus has come to the stop, so the next bus at the stop will be the next service
@@ -189,7 +189,7 @@ public class UpdateSimulation {
           for(int i = 0; i < simulation.size(); i++)
           {
             simulation.get(i).setCurrentTime(currentTime);
-            System.out.println("route " + route + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
+            //System.out.println("route " + route + ":" + " time " + simulation.get(i).getDate().get(Calendar.MINUTE));
             if(i == 5 && simulation.get(i).getServiceNumber() > 2 && (route == 68 || route == 67))
             {
               j --;
@@ -337,7 +337,7 @@ public class UpdateSimulation {
               //System.out.println(serviceTimes[i]);
               if(i != 1 && i != 4 && i != 8)
               {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+               Simulation sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
                date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
@@ -349,7 +349,7 @@ public class UpdateSimulation {
           case 66:
             for(int i = 0; i < busStops.length; i++)
             {
-               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+               Simulation sim = new Simulation(busStops[i], serviceTimes[i], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
                date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
                simArray.add(sim);
@@ -373,11 +373,11 @@ public class UpdateSimulation {
                  {
                     if(i < 8 )
                     {
-                      sim = new Simulation(busStops[i], serviceTimes[j], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+                      sim = new Simulation(busStops[i], serviceTimes[j], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
                     }
                     else
                     {
-                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
+                      sim = new Simulation(busStops[i], nextServiceTimes358Out[j], 0, /*serviceTimes[0]*/ 250, date, 1, BusStopInfo.getFullName(busStops[i]));
                     }
                     date.set(Calendar.HOUR, sim.getHours(sim.getNextArriveTime()));
                     date.set(Calendar.MINUTE, sim.getMinutes(sim.getNextArriveTime()));
@@ -409,13 +409,13 @@ public class UpdateSimulation {
                   {
                    if(i < 4)
                    {
-                     sim = new Simulation(busStops[i], serviceTimes[k], 0, serviceTimes[0], date, 0, BusStopInfo.getFullName(busStops[i]));
+                     sim = new Simulation(busStops[i], serviceTimes[k], 0, /*serviceTimes[0]*/ 250, date, 0, BusStopInfo.getFullName(busStops[i]));
                      //System.out.println("i" + i + ":" + serviceTimes[k] + BusStopInfo.getFullName(busStops[i]));
                      k++;
                    }
                    else
                    {
-                     sim = new Simulation(busStops[i], nextServiceTimes358back[j], 0, serviceTimes[0], date, 1, BusStopInfo.getFullName(busStops[i]));
+                     sim = new Simulation(busStops[i], nextServiceTimes358back[j], 0, /*serviceTimes[0]*/ 250, date, 1, BusStopInfo.getFullName(busStops[i]));
                      //System.out.println("i" + i + ":" + nextServiceTimes358back[j] + BusStopInfo.getFullName(busStops[i]));
                      j++;
                    }
@@ -546,6 +546,8 @@ public class UpdateSimulation {
         
         int k = 0;
         
+        int time = 250;
+        
         // while the last service has not gone
         // keep showing the time
         
@@ -553,7 +555,8 @@ public class UpdateSimulation {
         int[] lastServices = TimetableInfo.getServiceTimes(route, TimetableInfo.timetableKind(newDate), noOfServices - 1);
         while(simArray.get(0).getCurrentTime() < lastServices[lastServices.length - 1])
         {
-          updateSim(simArray, 66);
+          updateSim(simArray, 66, 250);
+          time++;
         }
     }
     

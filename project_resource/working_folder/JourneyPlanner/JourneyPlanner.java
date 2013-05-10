@@ -28,6 +28,7 @@ public class JourneyPlanner {
 
     for (int i = 0; i < RouteServicesTimes.size(); i++)
     {
+        
       // Check that bus really goes through both bus stops... thank you the bus which DOESN'T
      if (departureBusStopIndex < RouteServicesTimes.get(i).size() && 
           arrivalBusStopIndex < RouteServicesTimes.get(i).size())
